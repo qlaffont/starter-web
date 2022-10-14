@@ -1,0 +1,10 @@
+query getUserMe {
+  getUserMe {
+    id
+    avatarUrl
+    firstName
+    lastName
+    email
+    lang
+  }
+}
