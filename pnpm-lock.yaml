@@ -1,57 +1,57 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@babel/core': ^7.19.3
-  '@commitlint/cli': ^17.1.2
-  '@commitlint/config-conventional': ^17.1.0
-  '@graphql-codegen/cli': ^2.13.7
-  '@graphql-codegen/typescript': ^2.7.4
-  '@graphql-codegen/typescript-operations': ^2.5.4
-  '@graphql-codegen/typescript-react-query': ^4.0.2
-  '@headlessui/react': ^1.7.3
-  '@hookform/devtools': ^4.2.2
-  '@hookform/resolvers': ^2.9.9
-  '@tailwindcss/forms': ^0.5.3
-  '@tailwindcss/line-clamp': ^0.4.2
-  '@tanstack/react-query': ^4.12.0
-  '@tanstack/react-query-devtools': ^4.12.0
+  '@babel/core': 7.19.3
+  '@commitlint/cli': 17.1.2
+  '@commitlint/config-conventional': 17.1.0
+  '@graphql-codegen/cli': 2.13.7
+  '@graphql-codegen/typescript': 2.7.4
+  '@graphql-codegen/typescript-operations': 2.5.4
+  '@graphql-codegen/typescript-react-query': 4.0.2
+  '@headlessui/react': 1.7.3
+  '@hookform/devtools': 4.2.2
+  '@hookform/resolvers': 2.9.9
+  '@tailwindcss/forms': 0.5.3
+  '@tailwindcss/line-clamp': 0.4.2
+  '@tanstack/react-query': 4.12.0
+  '@tanstack/react-query-devtools': 4.12.0
   '@types/node': 18.8.5
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
-  '@typescript-eslint/eslint-plugin': ^5.40.0
-  '@typescript-eslint/parser': ^5.40.0
-  autoprefixer: ^10.4.12
-  clsx: ^1.2.1
-  csstype: ^3.1.1
-  env-vars-validator: ^1.1.108
+  '@typescript-eslint/eslint-plugin': 5.40.0
+  '@typescript-eslint/parser': 5.40.0
+  autoprefixer: 10.4.12
+  clsx: 1.2.1
+  csstype: 3.1.1
+  env-vars-validator: 1.1.108
   eslint: 8.25.0
   eslint-config-next: 12.3.1
-  eslint-config-prettier: ^8.5.0
-  eslint-plugin-import: ^2.26.0
-  eslint-plugin-prettier: ^4.2.1
-  eslint-plugin-simple-import-sort: ^8.0.0
-  graphql: ^16.6.0
-  husky: ^8.0.1
-  lint-staged: ^13.0.3
-  next: ^12.3.1
-  next-protected-auth: ^2.0.9
-  next-seo: ^5.5.0
-  postcss: ^8.4.18
-  prettier: ^2.7.1
-  prettier-plugin-tailwindcss: ^0.1.13
+  eslint-config-prettier: 8.5.0
+  eslint-plugin-import: 2.26.0
+  eslint-plugin-prettier: 4.2.1
+  eslint-plugin-simple-import-sort: 8.0.0
+  graphql: 16.6.0
+  husky: 8.0.1
+  lint-staged: 13.0.3
+  next: 12.3.1
+  next-protected-auth: 2.0.9
+  next-seo: 5.5.0
+  postcss: 8.4.18
+  prettier: 2.7.1
+  prettier-plugin-tailwindcss: 0.1.13
   react: 18.2.0
   react-dom: 18.2.0
-  react-hook-form: ^7.37.0
-  react-hot-toast: ^2.4.0
-  react-select: ^5.5.0
-  rosetty-react: ^1.4.8
-  sass: ^1.55.0
+  react-hook-form: 7.37.0
+  react-hot-toast: 2.4.0
+  react-select: 5.5.0
+  rosetty-react: 1.4.8
+  sass: 1.55.0
   socket.io-client: ^4.5.2
-  tailwindcss: ^3.1.8
-  ts-node: ^10.9.1
+  tailwindcss: 3.1.8
+  ts-node: 10.9.1
   typescript: 4.8.4
-  update-template: ^1.3.1
-  usehooks-ts: ^2.9.1
+  update-template: 1.3.1
+  usehooks-ts: 2.9.1
 
 dependencies:
   '@headlessui/react': 1.7.3_biqbaboplfbrettd7655fr4n2y
@@ -186,15 +186,6 @@ packages:
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
-
-  /@babel/generator/7.19.0:
-    resolution: {integrity: sha512-S1ahxf1gZ2dpoiFgA+ohK9DIpz50bJ0CWs7Zlzb54Z4sG8qmdIrGrVqmy1sAtTVRb+9CU6U8VqT9L0Zj7hxHVg==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/types': 7.19.4
-      '@jridgewell/gen-mapping': 0.3.2
-      jsesc: 2.5.2
-    dev: true
 
   /@babel/generator/7.19.5:
     resolution: {integrity: sha512-DxbNz9Lz4aMZ99qPpO1raTbcrI1ZeYh+9NR9qhfkQIbFtVEqotHojEBxHzmxhVONkGt6VyrqVQcgpefMy9pqcg==}
@@ -695,15 +686,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@babel/types/7.19.0:
-    resolution: {integrity: sha512-YuGopBq3ke25BVSiS6fgF49Ul9gH1x70Bcr6bqRLjWCkcX8Hre1/5+z+IiWOIerRMSSEfGZVB9z9kyq7wVs9YA==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/helper-string-parser': 7.19.4
-      '@babel/helper-validator-identifier': 7.19.1
-      to-fast-properties: 2.0.0
-    dev: true
-
   /@babel/types/7.19.4:
     resolution: {integrity: sha512-M5LK7nAeS6+9j7hAq+b3fQs+pNfUtTGq+yFFfHnauFA8zQtLRfmuipmsKDKKLuyG+wC8ABW43A153YNawNTEtw==}
     engines: {node: '>=6.9.0'}
@@ -797,7 +779,7 @@ packages:
       '@types/node': 14.18.29
       chalk: 4.1.2
       cosmiconfig: 7.0.1
-      cosmiconfig-typescript-loader: 4.1.0_nxlrwu45zhpwmwjzs33dzt3ak4
+      cosmiconfig-typescript-loader: 4.1.1_nxlrwu45zhpwmwjzs33dzt3ak4
       lodash: 4.17.21
       resolve-from: 5.0.0
       ts-node: 10.9.1_sqjhzn5m3vxyw66a2xhtc43hby
@@ -1030,9 +1012,9 @@ packages:
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
-      '@babel/generator': 7.19.0
+      '@babel/generator': 7.19.5
       '@babel/template': 7.18.10
-      '@babel/types': 7.19.0
+      '@babel/types': 7.19.4
       '@graphql-codegen/core': 2.6.2_graphql@16.6.0
       '@graphql-codegen/plugin-helpers': 2.7.1_graphql@16.6.0
       '@graphql-tools/apollo-engine-loader': 7.3.13_graphql@16.6.0
@@ -2431,7 +2413,7 @@ packages:
     dev: true
 
   /buffer-equal-constant-time/1.0.1:
-    resolution: {integrity: sha1-+OcRMvf/5uAaXJaXpMbz5I1cyBk=}
+    resolution: {integrity: sha512-zRpUiDwd/xk6ADqPMATG8vc9VPrkck7T07OIx0gnjmJAnHnTVXNQG3vfvWNuiZIkwu9KrKdA1iJKfsfTVxE6NA==}
     dev: true
 
   /buffer/5.7.1:
@@ -2672,7 +2654,7 @@ packages:
     dev: true
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
   /constant-case/3.0.4:
@@ -2736,21 +2718,6 @@ packages:
       '@iarna/toml': 2.2.5
     dev: true
 
-  /cosmiconfig-typescript-loader/4.1.0_nxlrwu45zhpwmwjzs33dzt3ak4:
-    resolution: {integrity: sha512-HbWIuR5O+XO5Oj9SZ5bzgrD4nN+rfhrm2PMb0FVx+t+XIvC45n8F0oTNnztXtspWGw0i2IzHaUWFD5LzV1JB4A==}
-    engines: {node: '>=12', npm: '>=6'}
-    peerDependencies:
-      '@types/node': '*'
-      cosmiconfig: '>=7'
-      ts-node: '>=10'
-      typescript: '>=3'
-    dependencies:
-      '@types/node': 14.18.29
-      cosmiconfig: 7.0.1
-      ts-node: 10.9.1_sqjhzn5m3vxyw66a2xhtc43hby
-      typescript: 4.8.4
-    dev: true
-
   /cosmiconfig-typescript-loader/4.1.1_khtbirhmpbd5tfrenb4b3bxaqm:
     resolution: {integrity: sha512-9DHpa379Gp0o0Zefii35fcmuuin6q92FnLDffzdZ0l9tVd3nEobG3O+MZ06+kuBvFTSVScvNb/oHA13Nd4iipg==}
     engines: {node: '>=12', npm: '>=6'}
@@ -2763,6 +2730,21 @@ packages:
       '@types/node': 18.8.5
       cosmiconfig: 7.0.1
       ts-node: 10.9.1_ptpocrdt7oaz4ni5mlvucph5pa
+      typescript: 4.8.4
+    dev: true
+
+  /cosmiconfig-typescript-loader/4.1.1_nxlrwu45zhpwmwjzs33dzt3ak4:
+    resolution: {integrity: sha512-9DHpa379Gp0o0Zefii35fcmuuin6q92FnLDffzdZ0l9tVd3nEobG3O+MZ06+kuBvFTSVScvNb/oHA13Nd4iipg==}
+    engines: {node: '>=12', npm: '>=6'}
+    peerDependencies:
+      '@types/node': '*'
+      cosmiconfig: '>=7'
+      ts-node: '>=10'
+      typescript: '>=3'
+    dependencies:
+      '@types/node': 14.18.29
+      cosmiconfig: 7.0.1
+      ts-node: 10.9.1_sqjhzn5m3vxyw66a2xhtc43hby
       typescript: 4.8.4
     dev: true
 
@@ -5516,7 +5498,7 @@ packages:
     dev: true
 
   /remove-accents/0.4.2:
-    resolution: {integrity: sha1-CkPTqq4egNuRngeuJUsoXZ4ce7U=}
+    resolution: {integrity: sha512-7pXIJqJOq5tFgG1A2Zxti3Ht8jJF337m4sowbuHsW30ZnkQFnDzy9qBNhgzX8ZLW4+UBcXiiR7SwR6pokHsxiA==}
     dev: false
 
   /remove-trailing-separator/1.1.0:
