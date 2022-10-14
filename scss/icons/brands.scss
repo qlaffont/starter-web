@@ -1,0 +1,17 @@
+.brand {
+  mask-size: 100% !important;
+  mask-repeat: no-repeat !important;
+
+  $icons: "discord";
+
+
+  @each $icon in $icons {
+    &.icon-#{$icon} {
+      mask: url('/brands/#{$icon}.svg');
+    }
+    &.bg-#{$icon} {
+      background: url('/brands/#{$icon}.svg') no-repeat;
+      background-size: 100%;
+    }
+  }
+}

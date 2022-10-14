@@ -1,0 +1,12 @@
+overwrite: true
+schema: ${NEXT_PUBLIC_GQL_URL}
+documents: "services/**/*.gql"
+generates:
+  services/apis/gql/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-query"
+    config:
+      skipTypename: true
+      fetcher: '../../react-query/fetcher#customFetcher'
