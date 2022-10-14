@@ -1,0 +1,11 @@
+query getUserMe {
+  getUserMe {
+    id
+    avatarUrl
+    username
+    twitchUsername
+    email
+    lang
+    token
+  }
+}

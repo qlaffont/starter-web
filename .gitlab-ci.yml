@@ -1,0 +1,47 @@
+# This folder is cached between builds
+# https://docs.gitlab.com/ee/ci/yaml/index.html#cache
+cache:
+  paths:
+    - node_modules/
+    - services/apis/gql/generated/graphql.ts
+
+stages:
+  - build
+  - quality
+
+build:
+  image: ubuntu:latest
+  stage: build
+  before_script:
+    - apt update && apt install -y curl unzip
+    - curl -fsSL https://fnm.vercel.app/install | bash
+    - export PATH=/root/.fnm:$PATH
+    - eval "`fnm env`"
+    - fnm install && fnm use
+    - curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
+  script:
+    - pnpm install
+    - pnpm generate-vercel
+    - pnpm run build
+  only:
+    - master
+    - preprod
+    - prod
+    - merge_requests
+
+quality:
+  image: ubuntu:latest
+  stage: quality
+  before_script:
+    - apt update && apt install -y curl unzip
+    - curl -fsSL https://fnm.vercel.app/install | bash
+    - export PATH=/root/.fnm:$PATH
+    - eval "`fnm env`"
+    - fnm install && fnm use
+    - curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
+  script:
+    - pnpm run lint
+    - pnpm audit --audit-level=high --only=prod
+  only:
+    - master
+    - merge_requests
