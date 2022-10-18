@@ -9,12 +9,6 @@ export const useI18n = () => {
 };
 
 export const getDefaultLanguage = () => {
-  if (typeof localStorage !== 'undefined') {
-    if (localStorage.getItem('lang')) {
-      return localStorage.getItem('lang') as string;
-    }
-  }
-
   if (typeof navigator !== 'undefined') {
     return navigator?.language?.toLowerCase()?.startsWith('fr') ? 'fr' : 'en';
   }

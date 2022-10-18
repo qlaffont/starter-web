@@ -15,7 +15,7 @@ import { locales, RosettyProvider } from 'rosetty-react';
 import { AppLayout } from '../components/layout/AppLayout';
 import enDict from '../i18n/en';
 import frDict from '../i18n/fr';
-import { useI18n } from '../i18n/useI18n';
+import { useI18n, useI18nSEO } from '../i18n/useI18n';
 // import { useGetUserMeQuery } from '../services/apis/gql/generated/graphql';
 import { reactQueryClient } from '../services/apis/react-query/reactQueryClient';
 import RestAPIService from '../services/apis/RestAPIService';
@@ -26,36 +26,32 @@ const rosettyLocales = {
   en: { dict: enDict, locale: locales.enGB },
 };
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
-  const defaultLanguage =
-    typeof navigator !== 'undefined' ? (navigator?.language?.toLowerCase()?.startsWith('fr') ? 'fr' : 'en') : 'en';
+const MyApp = ({ Component, pageProps }: AppProps) => (
+  <>
+    <QueryClientProvider client={reactQueryClient}>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="google" content="notranslate" />
+        <meta name="google" content="nositelinkssearchbox" />
 
-  return (
-    <>
-      <QueryClientProvider client={reactQueryClient}>
-        <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="google" content="notranslate" />
-          <meta name="google" content="nositelinkssearchbox" />
-
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-          <link rel="icon" type="image/png" href="/favicon.png" />
-          <title>App</title>
-        </Head>
-        <RosettyProvider languages={rosettyLocales} defaultLanguage={defaultLanguage}>
-          <NextAuthProvider>
-            <ExtendedApp {...{ Component, pageProps }} />
-          </NextAuthProvider>
-        </RosettyProvider>
-      </QueryClientProvider>
-    </>
-  );
-};
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <title>App</title>
+      </Head>
+      <RosettyProvider languages={rosettyLocales} defaultLanguage="en">
+        <NextAuthProvider>
+          <ExtendedApp {...{ Component, pageProps }} />
+        </NextAuthProvider>
+      </RosettyProvider>
+    </QueryClientProvider>
+  </>
+);
 
 const ExtendedApp = ({ Component, pageProps }) => {
   const { changeLang } = useI18n();
+  useI18nSEO();
   //@ts-ignore
   const Layout = Component.Layout ? Component.Layout : AppLayout;
 
