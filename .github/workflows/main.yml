@@ -24,6 +24,8 @@ jobs:
 
       - name: Install deps and build (with cache)
         run: pnpm install --no-frozen-lockfile
+        with:
+          version: 7.13.4
 
       - name: Lint
         run: pnpm lint
