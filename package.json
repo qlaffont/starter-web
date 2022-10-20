@@ -32,7 +32,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "7.38.0",
     "react-hot-toast": "2.4.0",
-    "react-select": "5.5.2",
+    "react-select": "5.5.4",
     "rosetty-react": "1.4.11",
     "socket.io-client": "4.5.3",
     "tailwindcss": "3.2.0",
