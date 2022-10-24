@@ -43,7 +43,7 @@
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
     "@graphql-codegen/cli": "2.13.7",
-    "@graphql-codegen/typescript": "2.7.5",
+    "@graphql-codegen/typescript": "2.8.0",
     "@graphql-codegen/typescript-operations": "2.5.5",
     "@graphql-codegen/typescript-react-query": "4.0.3",
     "@hookform/devtools": "4.2.2",

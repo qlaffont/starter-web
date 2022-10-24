@@ -5,7 +5,7 @@ specifiers:
   '@commitlint/cli': 17.1.2
   '@commitlint/config-conventional': 17.1.0
   '@graphql-codegen/cli': 2.13.7
-  '@graphql-codegen/typescript': 2.7.5
+  '@graphql-codegen/typescript': 2.8.0
   '@graphql-codegen/typescript-operations': 2.5.5
   '@graphql-codegen/typescript-react-query': 4.0.3
   '@headlessui/react': 1.7.3
@@ -80,7 +80,7 @@ devDependencies:
   '@commitlint/cli': 17.1.2
   '@commitlint/config-conventional': 17.1.0
   '@graphql-codegen/cli': 2.13.7_catevcyz7pcdfjs4vkj6kvu4yu
-  '@graphql-codegen/typescript': 2.7.5_graphql@16.6.0
+  '@graphql-codegen/typescript': 2.8.0_graphql@16.6.0
   '@graphql-codegen/typescript-operations': 2.5.5_graphql@16.6.0
   '@graphql-codegen/typescript-react-query': 4.0.3_graphql@16.6.0
   '@hookform/devtools': 4.2.2_4vbxmiqiebt2rvx7s6k23gxsii
@@ -1114,7 +1114,7 @@ packages:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
       '@graphql-codegen/plugin-helpers': 2.7.1_graphql@16.6.0
-      '@graphql-codegen/typescript': 2.7.5_graphql@16.6.0
+      '@graphql-codegen/typescript': 2.8.0_graphql@16.6.0
       '@graphql-codegen/visitor-plugin-common': 2.13.0_graphql@16.6.0
       auto-bind: 4.0.0
       graphql: 16.6.0
@@ -1140,8 +1140,8 @@ packages:
       - supports-color
     dev: true
 
-  /@graphql-codegen/typescript/2.7.5_graphql@16.6.0:
-    resolution: {integrity: sha512-NZMViINr0KEH+DgtOE3BDWkdrisX7cz3/+m6M73Sa2cMM1udTTCpLbNqFIHRmGl1UyfwjdZB32YoF/fxshjV/Q==}
+  /@graphql-codegen/typescript/2.8.0_graphql@16.6.0:
+    resolution: {integrity: sha512-atQ6NFfMmoknJi0QdVSozPugKcgeJB6t1/cVskbhVtX8tAEFFLjl6H23mpz3t35AH6aGWtvx2LCjUSxHI6P6xA==}
     peerDependencies:
       graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
