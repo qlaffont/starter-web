@@ -43,7 +43,7 @@ specifiers:
   react-dom: 18.2.0
   react-hook-form: 7.38.0
   react-hot-toast: 2.4.0
-  react-select: 5.5.5
+  react-select: 5.5.6
   rosetty-react: 1.4.14
   sass: 1.55.0
   socket.io-client: 4.5.3
@@ -69,7 +69,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.38.0_react@18.2.0
   react-hot-toast: 2.4.0_owo25xnefcwdq3zjgtohz6dbju
-  react-select: 5.5.5_gqucxhps6tzx3mklpvso6vv36e
+  react-select: 5.5.6_gqucxhps6tzx3mklpvso6vv36e
   rosetty-react: 1.4.14
   socket.io-client: 4.5.3
   tailwindcss: 3.2.1_neo3lunb2qpadwxplzw7r2isgm
@@ -5361,8 +5361,8 @@ packages:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: false
 
-  /react-select/5.5.5_gqucxhps6tzx3mklpvso6vv36e:
-    resolution: {integrity: sha512-B/csk0+BqJ9D36q/g/I8+YfQirKJoqduITqVmb3zUPhjZ0idFacgWMITTAn8Ys4MugtMrCPTXrchJ5mlFN6KjA==}
+  /react-select/5.5.6_gqucxhps6tzx3mklpvso6vv36e:
+    resolution: {integrity: sha512-1pynAh7scLBmrNEeDrYVYTImXowmEPzGqVlG7xdvXmBUSD6gVhNMPKdhlpwAHfPANcTwGIqms0Xerm0n5o2WxA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
