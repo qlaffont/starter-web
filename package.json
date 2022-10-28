@@ -46,7 +46,7 @@
     "@graphql-codegen/typescript": "2.8.0",
     "@graphql-codegen/typescript-operations": "2.5.5",
     "@graphql-codegen/typescript-react-query": "4.0.3",
-    "@hookform/devtools": "4.2.2",
+    "@hookform/devtools": "4.2.3",
     "@tailwindcss/line-clamp": "0.4.2",
     "@types/node": "18.11.7",
     "@types/react": "18.0.24",
