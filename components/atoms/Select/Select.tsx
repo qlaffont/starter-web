@@ -23,27 +23,36 @@ import { SelectValueContainer } from './SelectValueContainer';
 
 export interface SelectOption {
   label: string;
-  value: string;
+  value: unknown;
 }
 
-type SelectProps = {
-  className?: string;
+type Props = {
   async?: boolean;
   creatable?: boolean;
-  size?: InputSize;
+
+  isSearchable?: boolean;
+  isClearable?: boolean;
+
+  required?: boolean;
   disabled?: boolean;
+  placeholder?: string;
+
   options?: SelectOption[];
+  loadOptions?: (filter: string) => SelectOption[];
+
+  className?: string;
+  size?: InputSize;
+
   label?: string;
   error?;
   helperText?: string;
-  value?: any;
+
+  value?: unknown;
   selectRef?: RefCallBack;
-  required?: boolean;
-  inputProps?: Record<string, any>;
+
+  inputProps?: Record<string, unknown>;
   hideIndicator?: boolean;
-  isSearchable?: boolean;
-  isClearable?: boolean;
-  placeholder?: string;
+
   onChange;
   SingleValueComponent?;
   OptionComponent?;
@@ -51,7 +60,7 @@ type SelectProps = {
   id?;
 };
 
-export const SelectComponent: React.FC<SelectProps> = ({
+export const SelectComponent: React.FC<Props> = ({
   async = false,
   creatable = false,
   className = '',
@@ -138,13 +147,7 @@ export const SelectComponent: React.FC<SelectProps> = ({
   );
 };
 
-export const Select = ({
-  name,
-  control,
-  options,
-  required = false,
-  ...props
-}: Partial<SelectProps> & { name; control }) => (
+export const Select = ({ name, control, options, required = false, ...props }: Partial<Props> & { name; control }) => (
   <Controller
     name={name}
     control={control}
