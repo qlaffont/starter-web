@@ -14,7 +14,7 @@ specifiers:
   '@tailwindcss/forms': 0.5.3
   '@tailwindcss/line-clamp': 0.4.2
   '@tanstack/react-query': 4.14.6
-  '@tanstack/react-query-devtools': 4.14.6
+  '@tanstack/react-query-devtools': 4.14.8
   '@types/node': 18.11.9
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.8
@@ -58,7 +58,7 @@ dependencies:
   '@hookform/resolvers': 2.9.10_react-hook-form@7.39.3
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.4
   '@tanstack/react-query': 4.14.6_biqbaboplfbrettd7655fr4n2y
-  '@tanstack/react-query-devtools': 4.14.6_shujuikkfktcni5nskojfartz4
+  '@tanstack/react-query-devtools': 4.14.8_shujuikkfktcni5nskojfartz4
   clsx: 1.2.1
   env-vars-validator: 1.1.122
   graphql: 16.6.0
@@ -1796,8 +1796,8 @@ packages:
     resolution: {integrity: sha512-Su1AyrPb6xnm7wXTvpN5tt+B7LViYSh9k04vvuc6+eMVH0HkE9ktZTXibRrTvV83BI1KP5MG7v/k90ne/4zQzw==}
     dev: false
 
-  /@tanstack/react-query-devtools/4.14.6_shujuikkfktcni5nskojfartz4:
-    resolution: {integrity: sha512-sniduBwiMYl2bkC/9dTlpZQQqMQdJeiubl/UUUZkD4qH/OOVFK5EiHxvBxNXYPY6S0q8QmmI/0KOsk4a+Eoq3w==}
+  /@tanstack/react-query-devtools/4.14.8_shujuikkfktcni5nskojfartz4:
+    resolution: {integrity: sha512-Bb1B7F8ZnigNEenAE9Z3En0PAcCX2QkpSIW/hd5GMcrhJOsjkSBvZMzDHYD197qznzIjUY/F3FP+N8TGaW/9Xw==}
     peerDependencies:
       '@tanstack/react-query': 4.14.6
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
