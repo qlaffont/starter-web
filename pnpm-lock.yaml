@@ -46,7 +46,7 @@ specifiers:
   react-select: 5.6.1
   rosetty-react: 1.4.34
   sass: 1.56.1
-  socket.io-client: 4.5.3
+  socket.io-client: 4.5.4
   tailwindcss: 3.2.4
   ts-node: 10.9.1
   typescript: 4.9.3
@@ -71,7 +71,7 @@ dependencies:
   react-hot-toast: 2.4.0_owo25xnefcwdq3zjgtohz6dbju
   react-select: 5.6.1_o6ujcdmwt6ni5mv4wdf5n6tg3y
   rosetty-react: 1.4.34
-  socket.io-client: 4.5.3
+  socket.io-client: 4.5.4
   tailwindcss: 3.2.4_v776zzvn44o7tpgzieipaairwm
   usehooks-ts: 2.9.1_biqbaboplfbrettd7655fr4n2y
 
@@ -5915,8 +5915,8 @@ packages:
       tslib: 2.4.0
     dev: true
 
-  /socket.io-client/4.5.3:
-    resolution: {integrity: sha512-I/hqDYpQ6JKwtJOf5ikM+Qz+YujZPMEl6qBLhxiP0nX+TfXKhW4KZZG8lamrD6Y5ngjmYHreESVasVCgi5Kl3A==}
+  /socket.io-client/4.5.4:
+    resolution: {integrity: sha512-ZpKteoA06RzkD32IbqILZ+Cnst4xewU7ZYK12aS1mzHftFFjpoMz69IuhP/nL25pJfao/amoPI527KnuhFm01g==}
     engines: {node: '>=10.0.0'}
     dependencies:
       '@socket.io/component-emitter': 3.1.0
