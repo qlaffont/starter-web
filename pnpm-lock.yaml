@@ -23,7 +23,7 @@ specifiers:
   autoprefixer: 10.4.13
   clsx: 1.2.1
   csstype: 3.1.1
-  env-vars-validator: 1.1.126
+  env-vars-validator: 1.1.127
   eslint: 8.28.0
   eslint-config-next: 13.0.4
   eslint-config-prettier: 8.5.0
@@ -60,7 +60,7 @@ dependencies:
   '@tanstack/react-query': 4.16.1_biqbaboplfbrettd7655fr4n2y
   '@tanstack/react-query-devtools': 4.16.1_makdk7ivkz7rbnnozofqroz2qy
   clsx: 1.2.1
-  env-vars-validator: 1.1.126
+  env-vars-validator: 1.1.127
   graphql: 16.6.0
   next: 13.0.4_vgii64pd2ccbnbx2v3ro5gbin4
   next-protected-auth: 2.0.38_vgii64pd2ccbnbx2v3ro5gbin4
@@ -3078,8 +3078,8 @@ packages:
       tapable: 2.2.1
     dev: true
 
-  /env-vars-validator/1.1.126:
-    resolution: {integrity: sha512-TrkbwTgoLyoYZJERMMgUBAhdLjy1oJXyY6j4KJkMsiea8w4cD6LJzsPKq4WHRLrnwR8xxcDhrv8cwcZ7wj1nDw==}
+  /env-vars-validator/1.1.127:
+    resolution: {integrity: sha512-bl7caGYcNfnfz6DikogJY/JBX/xnzfhx0F9PN9VBZQTRmccD1D8gnVBrJKHCFTxXFUHK1FmigtBmPMf65bclZw==}
     engines: {node: '>=10'}
     dependencies:
       ajv: 8.11.0
