@@ -7,7 +7,7 @@ specifiers:
   '@graphql-codegen/cli': 2.13.12
   '@graphql-codegen/typescript': 2.8.2
   '@graphql-codegen/typescript-operations': 2.5.7
-  '@graphql-codegen/typescript-react-query': 4.0.5
+  '@graphql-codegen/typescript-react-query': 4.0.6
   '@headlessui/react': 1.7.4
   '@hookform/devtools': 4.2.3
   '@hookform/resolvers': 2.9.10
@@ -82,7 +82,7 @@ devDependencies:
   '@graphql-codegen/cli': 2.13.12_kyz2oohkk3pblubgvvdpiwyc5a
   '@graphql-codegen/typescript': 2.8.2_graphql@16.6.0
   '@graphql-codegen/typescript-operations': 2.5.7_graphql@16.6.0
-  '@graphql-codegen/typescript-react-query': 4.0.5_graphql@16.6.0
+  '@graphql-codegen/typescript-react-query': 4.0.6_graphql@16.6.0
   '@hookform/devtools': 4.2.3_o6ujcdmwt6ni5mv4wdf5n6tg3y
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.4
   '@types/node': 18.11.9
@@ -1121,8 +1121,8 @@ packages:
       - supports-color
     dev: true
 
-  /@graphql-codegen/typescript-react-query/4.0.5_graphql@16.6.0:
-    resolution: {integrity: sha512-zg0bKtaeyE1Jym7CAXhnNSvXuV3qqF+tuMbM2xhjn9ZTZY0UB2ae743lZkLUEY382KL2NpuyNh8rr1ngNRbk/Q==}
+  /@graphql-codegen/typescript-react-query/4.0.6_graphql@16.6.0:
+    resolution: {integrity: sha512-8eXpv6EzyMSji6RmO/txdBVHRb/dwJCIeMUuR7sMhKn2m0kXffrJL9v3u4AR7pdMsME4NChF3hb53PF1tHBSRw==}
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
