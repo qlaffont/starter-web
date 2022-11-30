@@ -4,7 +4,7 @@ specifiers:
   '@babel/core': 7.20.5
   '@commitlint/cli': 17.3.0
   '@commitlint/config-conventional': 17.3.0
-  '@graphql-codegen/cli': 2.14.1
+  '@graphql-codegen/cli': 2.15.0
   '@graphql-codegen/typescript': 2.8.2
   '@graphql-codegen/typescript-operations': 2.5.7
   '@graphql-codegen/typescript-react-query': 4.0.6
@@ -79,7 +79,7 @@ devDependencies:
   '@babel/core': 7.20.5
   '@commitlint/cli': 17.3.0
   '@commitlint/config-conventional': 17.3.0
-  '@graphql-codegen/cli': 2.14.1_cgigt2c7o5i2z5z52p7vxs3are
+  '@graphql-codegen/cli': 2.15.0_cgigt2c7o5i2z5z52p7vxs3are
   '@graphql-codegen/typescript': 2.8.2_graphql@16.6.0
   '@graphql-codegen/typescript-operations': 2.5.7_graphql@16.6.0
   '@graphql-codegen/typescript-react-query': 4.0.6_graphql@16.6.0
@@ -186,15 +186,6 @@ packages:
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
-
-  /@babel/generator/7.20.2:
-    resolution: {integrity: sha512-SD75PMIK6i9H8G/tfGvB4KKl4Nw6Ssos9nGgYwxbgyTP0iX/Z55DveoH86rmUB/YHTQQ+ZC0F7xxaY8l2OF44Q==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/types': 7.20.5
-      '@jridgewell/gen-mapping': 0.3.2
-      jsesc: 2.5.2
-    dev: true
 
   /@babel/generator/7.20.5:
     resolution: {integrity: sha512-jl7JY2Ykn9S0yj4DQP82sYvPU+T3g0HFcWTqDLqiuA9tGRNIj9VfbtXGAYTTkyNEnQk1jkMGOdYka8aG/lulCA==}
@@ -705,15 +696,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@babel/types/7.20.2:
-    resolution: {integrity: sha512-FnnvsNWgZCr232sqtXggapvlkk/tuwR/qhGzcmxI0GXLCjmPYQPzio2FbdlWuY6y1sHFfQKk+rRbUZ9VStQMog==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/helper-string-parser': 7.19.4
-      '@babel/helper-validator-identifier': 7.19.1
-      to-fast-properties: 2.0.0
-    dev: true
-
   /@babel/types/7.20.5:
     resolution: {integrity: sha512-c9fst/h2/dcF7H+MJKZ2T0KjEQ8hY/BNnDk/H3XY8C4Aw/eWQXWn/lWntHF9ooUBnGmEvbfGrTgLWc+um0YDUg==}
     engines: {node: '>=6.9.0'}
@@ -1040,15 +1022,15 @@ packages:
       '@floating-ui/core': 1.0.1
     dev: false
 
-  /@graphql-codegen/cli/2.14.1_cgigt2c7o5i2z5z52p7vxs3are:
-    resolution: {integrity: sha512-Z9EiX8yJ5xtNdw/1ApV8uKx6UjCNl/D28zTHU8Fa7BcCdi3ilGOKSiWCNZaH1mpwKr5EfX18kme2bIqKmohv/w==}
+  /@graphql-codegen/cli/2.15.0_cgigt2c7o5i2z5z52p7vxs3are:
+    resolution: {integrity: sha512-o4Wh99VJDX/z0fG3pkdOf0t0fu7SlYn6qlLnqzNhVpZByGPe548gu11GKiOPKVaQ76kkB3dzqzfINRl+v7EA4A==}
     hasBin: true
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
-      '@babel/generator': 7.20.2
+      '@babel/generator': 7.20.5
       '@babel/template': 7.18.10
-      '@babel/types': 7.20.2
+      '@babel/types': 7.20.5
       '@graphql-codegen/core': 2.6.6_graphql@16.6.0
       '@graphql-codegen/plugin-helpers': 2.7.2_graphql@16.6.0
       '@graphql-tools/apollo-engine-loader': 7.3.13_graphql@16.6.0
