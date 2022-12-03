@@ -35,7 +35,7 @@ specifiers:
   lint-staged: 13.0.4
   next: 13.0.6
   next-protected-auth: 2.0.45
-  next-seo: 5.14.1
+  next-seo: 5.15.0
   postcss: 8.4.19
   prettier: 2.8.0
   prettier-plugin-tailwindcss: 0.2.0
@@ -64,7 +64,7 @@ dependencies:
   graphql: 16.6.0
   next: 13.0.6_kzvotn2zipzqwaptii5a7wxu3y
   next-protected-auth: 2.0.45_kzvotn2zipzqwaptii5a7wxu3y
-  next-seo: 5.14.1_6jx7hpii6hgsrmhxgqrmo3277u
+  next-seo: 5.15.0_6jx7hpii6hgsrmhxgqrmo3277u
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.40.0_react@18.2.0
@@ -4951,8 +4951,8 @@ packages:
       - sass
     dev: false
 
-  /next-seo/5.14.1_6jx7hpii6hgsrmhxgqrmo3277u:
-    resolution: {integrity: sha512-NiJeQbxYP3z+EMp52q8k3Q+OfX2+Yv2WehERDj98r2wjXxL+woKpRBdsSVYolTD0Hm8IWs42SzaISE93RoQdOw==}
+  /next-seo/5.15.0_6jx7hpii6hgsrmhxgqrmo3277u:
+    resolution: {integrity: sha512-LGbcY91yDKGMb7YI+28n3g+RuChUkt6pXNpa8FkfKkEmNiJkeRDEXTnnjVtwT9FmMhG6NH8qwHTelGrlYm9rgg==}
     peerDependencies:
       next: ^8.1.1-canary.54 || >=9.0.0
       react: '>=16.0.0'
