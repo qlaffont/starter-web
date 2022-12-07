@@ -1,11 +1,13 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import clsx from 'clsx';
-import React, { ComponentPropsWithoutRef, PropsWithoutRef, RefAttributes } from 'react';
+import React, { ComponentPropsWithoutRef, HTMLInputTypeAttribute, PropsWithoutRef, RefAttributes } from 'react';
 import { useMemo } from 'react';
-import { UseFormRegisterReturn } from 'react-hook-form';
+import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
+
+import { useI18n } from '../../i18n/useI18n';
+import { translateErrorMessage } from '../../i18n/validation';
 
 const variantClassNames = {
-  transparent: 'w-full',
   normal: 'border border-dark-10 focus-within:border-dark-30 rounded-md',
 };
 
@@ -15,8 +17,6 @@ const sizeClassNames = {
 };
 
 const variantInputClassNames: Record<keyof typeof variantClassNames, string> = {
-  transparent:
-    'peer h-10 w-full text-black dark:text-white placeholder-transparent focus:placeholder-dark-10 focus:outline-none bg-transparent !border-0 outline-none !shadow-none !ring-transparent',
   normal:
     'peer h-10 w-full text-black dark:text-white focus:outline-none bg-transparent !border-0 outline-none !shadow-none !ring-transparent',
 };
@@ -27,8 +27,16 @@ const sizeInputClassNames: Record<keyof typeof sizeClassNames, string> = {
 };
 
 const variantLabelClassNames: Record<keyof typeof variantClassNames, string> = {
-  transparent: '',
   normal: '',
+};
+
+const iconVariantClassNames: Record<keyof typeof variantClassNames, string> = {
+  normal: 'bg-black',
+};
+
+const iconSizeClassNames: Record<keyof typeof sizeClassNames, string> = {
+  medium: 'h-4 w-4',
+  small: 'h-3 w-3',
 };
 
 export type InputSize = keyof typeof sizeClassNames;
@@ -41,8 +49,8 @@ export interface InputProps extends ComponentPropsWithoutRef<'input'> {
   variant?: keyof typeof variantClassNames;
   size?: InputSize;
   className?: string;
-  type?: string;
-  error?;
+  type?: HTMLInputTypeAttribute;
+  error?: FieldError;
   register?: UseFormRegisterReturn;
   prefixIcon?: string;
   suffixIcon?: string;
@@ -52,7 +60,8 @@ export interface InputProps extends ComponentPropsWithoutRef<'input'> {
   inputClassName?: string;
   helperText?: string;
   disabled?: boolean;
-  onClick?: React.MouseEventHandler<any>;
+  onPrefixClick?: React.MouseEventHandler<any>;
+  onSuffixClick?: React.MouseEventHandler<any>;
   inputRef?: React.LegacyRef<HTMLInputElement>;
 }
 
@@ -74,11 +83,13 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
   error,
   register = {},
   inputRef,
-  onClick,
+  onPrefixClick,
+  onSuffixClick,
   helperText,
   required,
   ...props
 }) => {
+  const { t } = useI18n();
   const isError = useMemo(() => {
     return !!error;
   }, [error]);
@@ -89,7 +100,7 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
         <label
           htmlFor={name}
           className={clsx(
-            'block pb-1 text-black dark:text-white',
+            'text-primary-100 block max-w-xl pb-1 text-sm',
             variantLabelClassNames[variant],
             isError ? ' !text-error' : '',
             labelClassName,
@@ -113,16 +124,18 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
           <div>
             <i
               className={clsx(
-                'icon bg-dark-100 block h-5 w-5',
-                `icon-${prefixIcon}`,
+                'block',
+                `${prefixIcon}`,
+                iconVariantClassNames[variant],
+                iconSizeClassNames[size],
                 prefixIconClassName,
-                disabled ? 'cursor-not-allowed' : 'cursor-pointer',
+                onPrefixClick ? (disabled ? 'cursor-not-allowed' : 'cursor-pointer') : '',
               )}
-              onClick={onClick}
+              onClick={onPrefixClick}
             />
           </div>
         )}
-        <div className="flex-grow">
+        <div className="grow">
           <input
             id={name}
             name={name}
@@ -131,8 +144,8 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
               'px-0',
               variantInputClassNames[variant],
               sizeInputClassNames[size],
-              'placeholder-white placeholder-opacity-60',
               disabled ? 'cursor-not-allowed' : '',
+              props.contentEditable === false && 'cursor-default caret-transparent',
               inputClassName,
             )}
             disabled={disabled}
@@ -146,20 +159,27 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
           <div>
             <i
               className={clsx(
-                'icon block h-5 w-5 bg-white',
-                `icon-${suffixIcon}`,
+                'block',
+                `${suffixIcon}`,
+                iconVariantClassNames[variant],
+                iconSizeClassNames[size],
                 suffixIconClassName,
-                disabled ? 'cursor-not-allowed' : 'cursor-pointer',
+                onSuffixClick ? (disabled ? 'cursor-not-allowed' : 'cursor-pointer') : '',
               )}
-              onClick={onClick}
+              onClick={onSuffixClick}
             />
           </div>
         )}
       </div>
       {(!!error || helperText) && (
         <p
-          className={clsx('mt-1 text-sm', isError ? '!border-error !text-error' : 'text-white text-opacity-80')}
-          dangerouslySetInnerHTML={{ __html: error || helperText }}
+          className={clsx(
+            'mt-1 max-w-xl text-sm',
+            isError ? '!border-error !text-error' : 'text-white text-opacity-80',
+          )}
+          dangerouslySetInnerHTML={{
+            __html: translateErrorMessage({ message: error?.message }, t, undefined) || helperText,
+          }}
         ></p>
       )}
     </div>
