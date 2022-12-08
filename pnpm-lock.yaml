@@ -38,7 +38,7 @@ specifiers:
   next-seo: 5.15.0
   postcss: 8.4.19
   prettier: 2.8.1
-  prettier-plugin-tailwindcss: 0.2.0
+  prettier-plugin-tailwindcss: 0.2.1
   react: 18.2.0
   react-dom: 18.2.0
   react-hook-form: 7.40.0
@@ -102,7 +102,7 @@ devDependencies:
   lint-staged: 13.1.0
   postcss: 8.4.19
   prettier: 2.8.1
-  prettier-plugin-tailwindcss: 0.2.0_prettier@2.8.1
+  prettier-plugin-tailwindcss: 0.2.1_prettier@2.8.1
   sass: 1.56.1
   ts-node: 10.9.1_r65g46xrm45gbuklnvp6xevc2y
   typescript: 4.9.4
@@ -5448,8 +5448,8 @@ packages:
       fast-diff: 1.2.0
     dev: true
 
-  /prettier-plugin-tailwindcss/0.2.0_prettier@2.8.1:
-    resolution: {integrity: sha512-Ruqig/mdWCSpqdq9WK44nrmqM4BFWTzBPhPGwC5NK3coV9eZntEQPB84MGZbjAg0XQU02jVRHXNRPREBzxvM+A==}
+  /prettier-plugin-tailwindcss/0.2.1_prettier@2.8.1:
+    resolution: {integrity: sha512-aIO8IguumORyRsmT+E7JfJ3A9FEoyhqZR7Au7TBOege3VZkgMvHJMkufeYp4zjnDK2iq4ktkvGMNOQR9T8lisQ==}
     engines: {node: '>=12.17.0'}
     peerDependencies:
       prettier: '>=2.2.0'
