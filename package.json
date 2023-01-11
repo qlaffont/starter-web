@@ -42,7 +42,7 @@
     "@babel/core": "7.20.12",
     "@commitlint/cli": "17.4.1",
     "@commitlint/config-conventional": "17.4.0",
-    "@graphql-codegen/cli": "2.16.3",
+    "@graphql-codegen/cli": "2.16.4",
     "@graphql-codegen/typescript": "2.8.7",
     "@graphql-codegen/typescript-operations": "2.5.12",
     "@graphql-codegen/typescript-react-query": "4.0.6",
