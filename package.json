@@ -23,7 +23,7 @@
     "@tanstack/react-query": "4.22.0",
     "@tanstack/react-query-devtools": "4.22.0",
     "clsx": "1.2.1",
-    "env-vars-validator": "1.1.148",
+    "env-vars-validator": "1.1.149",
     "graphql": "16.6.0",
     "next": "13.1.2",
     "next-protected-auth": "2.0.65",
