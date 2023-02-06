@@ -8,7 +8,7 @@ specifiers:
   '@graphql-codegen/typescript': 3.0.0
   '@graphql-codegen/typescript-operations': 3.0.0
   '@graphql-codegen/typescript-react-query': 4.1.0
-  '@headlessui/react': 1.7.9
+  '@headlessui/react': 1.7.10
   '@hookform/devtools': 4.3.0
   '@hookform/resolvers': 2.9.10
   '@tailwindcss/forms': 0.5.3
@@ -54,7 +54,7 @@ specifiers:
   usehooks-ts: 2.9.1
 
 dependencies:
-  '@headlessui/react': 1.7.9_biqbaboplfbrettd7655fr4n2y
+  '@headlessui/react': 1.7.10_biqbaboplfbrettd7655fr4n2y
   '@hookform/resolvers': 2.9.10_react-hook-form@7.43.0
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.4
   '@tanstack/react-query': 4.24.4_biqbaboplfbrettd7655fr4n2y
@@ -1657,8 +1657,8 @@ packages:
       graphql: 16.6.0
     dev: true
 
-  /@headlessui/react/1.7.9_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-Bobh/+mDciu8kEE2hvdukFYjbfaG4MEkK/6TjWOgqcODLKYpRhWPKPE+dCcCSz/YrwjFVrEAMOiWtfk6sW20/w==}
+  /@headlessui/react/1.7.10_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-1m66h/5eayTEZVT2PI13/2PG3EVC7a9XalmUtVSC8X76pcyKYMuyX1XAL2RUtCr8WhoMa/KrDEyoeU5v+kSQOw==}
     engines: {node: '>=10'}
     peerDependencies:
       react: ^16 || ^17 || ^18
