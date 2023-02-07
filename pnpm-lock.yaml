@@ -32,7 +32,7 @@ specifiers:
   eslint-plugin-simple-import-sort: 10.0.0
   graphql: 16.6.0
   husky: 8.0.3
-  lint-staged: 13.1.0
+  lint-staged: 13.1.1
   next: 13.1.6
   next-protected-auth: 2.0.81
   next-seo: 5.15.0
@@ -99,7 +99,7 @@ devDependencies:
   eslint-plugin-prettier: 4.2.1_jqplj6qf3uqpxpu4gdyhwwasnq
   eslint-plugin-simple-import-sort: 10.0.0_eslint@8.33.0
   husky: 8.0.3
-  lint-staged: 13.1.0
+  lint-staged: 13.1.1
   postcss: 8.4.21
   prettier: 2.8.3
   prettier-plugin-tailwindcss: 0.2.2_prettier@2.8.3
@@ -4800,8 +4800,8 @@ packages:
   /lines-and-columns/1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  /lint-staged/13.1.0:
-    resolution: {integrity: sha512-pn/sR8IrcF/T0vpWLilih8jmVouMlxqXxKuAojmbiGX5n/gDnz+abdPptlj0vYnbfE0SQNl3CY/HwtM0+yfOVQ==}
+  /lint-staged/13.1.1:
+    resolution: {integrity: sha512-LLJLO0Kdbcv2a+CvSF4p1M7jBZOajKSMpBUvyR8+bXccsqPER0/NxTFQSpNHjqwV9kM3tkHczYerTB5wI+bksQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
