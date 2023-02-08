@@ -10,7 +10,7 @@ specifiers:
   '@graphql-codegen/typescript-react-query': 4.1.0
   '@headlessui/react': 1.7.10
   '@hookform/devtools': 4.3.0
-  '@hookform/resolvers': 2.9.10
+  '@hookform/resolvers': 2.9.11
   '@tailwindcss/forms': 0.5.3
   '@tailwindcss/line-clamp': 0.4.2
   '@tanstack/react-query': 4.24.4
@@ -55,7 +55,7 @@ specifiers:
 
 dependencies:
   '@headlessui/react': 1.7.10_biqbaboplfbrettd7655fr4n2y
-  '@hookform/resolvers': 2.9.10_react-hook-form@7.43.1
+  '@hookform/resolvers': 2.9.11_react-hook-form@7.43.1
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.4
   '@tanstack/react-query': 4.24.4_biqbaboplfbrettd7655fr4n2y
   '@tanstack/react-query-devtools': 4.24.4_pkeil6ml7pq7xvil3imldjs2sa
@@ -1690,8 +1690,8 @@ packages:
       - '@types/react'
     dev: true
 
-  /@hookform/resolvers/2.9.10_react-hook-form@7.43.1:
-    resolution: {integrity: sha512-JIL1DgJIlH9yuxcNGtyhsWX/PgNltz+5Gr6+8SX9fhXc/hPbEIk6wPI82nhgvp3uUb6ZfAM5mqg/x7KR7NAb+A==}
+  /@hookform/resolvers/2.9.11_react-hook-form@7.43.1:
+    resolution: {integrity: sha512-bA3aZ79UgcHj7tFV7RlgThzwSSHZgvfbt2wprldRkYBcMopdMvHyO17Wwp/twcJasNFischFfS7oz8Katz8DdQ==}
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
