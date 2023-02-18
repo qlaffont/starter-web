@@ -45,7 +45,7 @@ specifiers:
   react-hot-toast: 2.4.0
   react-select: 5.7.0
   rosetty-react: 1.4.84
-  sass: 1.58.2
+  sass: 1.58.3
   socket.io-client: 4.6.0
   tailwindcss: 3.2.7
   ts-node: 10.9.1
@@ -62,8 +62,8 @@ dependencies:
   clsx: 1.2.1
   env-vars-validator: 1.2.2
   graphql: 16.6.0
-  next: 13.1.6_4u6c57fe2msmz5uzpiwwufo4my
-  next-protected-auth: 2.0.90_4u6c57fe2msmz5uzpiwwufo4my
+  next: 13.1.6_fnuj3fzhui6llme6bllp7seoda
+  next-protected-auth: 2.0.90_fnuj3fzhui6llme6bllp7seoda
   next-seo: 5.15.0_3vryta7zmbcsw4rrqf4axjqggm
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -103,7 +103,7 @@ devDependencies:
   postcss: 8.4.21
   prettier: 2.8.4
   prettier-plugin-tailwindcss: 0.2.3_prettier@2.8.4
-  sass: 1.58.2
+  sass: 1.58.3
   ts-node: 10.9.1_4bewfcp2iebiwuold25d6rgcsy
   typescript: 4.9.5
   update-template: 1.3.1
@@ -5128,11 +5128,11 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next-protected-auth/2.0.90_4u6c57fe2msmz5uzpiwwufo4my:
+  /next-protected-auth/2.0.90_fnuj3fzhui6llme6bllp7seoda:
     resolution: {integrity: sha512-OuKd4UJVXS4kQINnuOetl1oR8IdNh2Z8TX8K3AJhqnfMOJ3D6+JrEiR9Gd4nsLMn9Y1jXaVDFXzKSL4BY/WtDg==}
     engines: {node: '>=10'}
     dependencies:
-      next: 13.1.6_4u6c57fe2msmz5uzpiwwufo4my
+      next: 13.1.6_fnuj3fzhui6llme6bllp7seoda
       react-test-renderer: 18.2.0_react@18.2.0
       usehooks-ts: 2.9.1_biqbaboplfbrettd7655fr4n2y
     transitivePeerDependencies:
@@ -5152,12 +5152,12 @@ packages:
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
     dependencies:
-      next: 13.1.6_4u6c57fe2msmz5uzpiwwufo4my
+      next: 13.1.6_fnuj3fzhui6llme6bllp7seoda
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /next/13.1.6_4u6c57fe2msmz5uzpiwwufo4my:
+  /next/13.1.6_fnuj3fzhui6llme6bllp7seoda:
     resolution: {integrity: sha512-hHlbhKPj9pW+Cymvfzc15lvhaOZ54l+8sXDXJWm3OBNBzgrVj6hwGPmqqsXg40xO1Leq+kXpllzRPuncpC0Phw==}
     engines: {node: '>=14.6.0'}
     hasBin: true
@@ -5181,7 +5181,7 @@ packages:
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      sass: 1.58.2
+      sass: 1.58.3
       styled-jsx: 5.1.1_2exiyaescjxorpwwmy4ejghgte
     optionalDependencies:
       '@next/swc-android-arm-eabi': 13.1.6
@@ -6074,8 +6074,8 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
-  /sass/1.58.2:
-    resolution: {integrity: sha512-2mbyOWOv/lhEXD6nVrQZQ4KT2DlwcODbTskM42EyqBAFUWOhiiYtAXZqjZz1ygzapYf+N+2GwfIH9M5FM4GUMg==}
+  /sass/1.58.3:
+    resolution: {integrity: sha512-Q7RaEtYf6BflYrQ+buPudKR26/lH+10EmO9bBqbmPh/KeLqv8bjpTNqxe71ocONqXq+jYiCbpPUmQMS+JJPk4A==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
