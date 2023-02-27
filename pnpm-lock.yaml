@@ -44,7 +44,7 @@ specifiers:
   react-hook-form: 7.43.2
   react-hot-toast: 2.4.0
   react-select: 5.7.0
-  rosetty-react: 1.4.85
+  rosetty-react: 1.4.86
   sass: 1.58.3
   socket.io-client: 4.6.1
   tailwindcss: 3.2.7
@@ -70,7 +70,7 @@ dependencies:
   react-hook-form: 7.43.2_react@18.2.0
   react-hot-toast: 2.4.0_owo25xnefcwdq3zjgtohz6dbju
   react-select: 5.7.0_etgemzlavky3k4ooobeqgg2miu
-  rosetty-react: 1.4.85
+  rosetty-react: 1.4.86
   socket.io-client: 4.6.1
   tailwindcss: 3.2.7_aesdjsunmf4wiehhujt67my7tu
   usehooks-ts: 2.9.1_biqbaboplfbrettd7655fr4n2y
@@ -6089,8 +6089,8 @@ packages:
       templite: 1.2.0
     dev: false
 
-  /rosetty-react/1.4.85:
-    resolution: {integrity: sha512-4H+QB0zET0V9h4FXb7iFJCfHKv3r71OPc69HhYOdmODp54ECtOXTzcaFOaHXFOV/XY9yozJmD1bvgSGAtH6V1g==}
+  /rosetty-react/1.4.86:
+    resolution: {integrity: sha512-/zBuGfKGlEzgS1u1ttyolWJklym83xegonqPhVvi+pJ0JkEvPAJj7MU2xZTGjWSkXRF914eYy5PuGHlUzfFPsg==}
     engines: {node: '>=10'}
     dependencies:
       rosetty: 1.4.84
