@@ -34,7 +34,7 @@ specifiers:
   husky: 8.0.3
   lint-staged: 13.1.2
   next: 13.2.1
-  next-protected-auth: 2.0.92
+  next-protected-auth: 2.0.93
   next-seo: 5.15.0
   postcss: 8.4.21
   prettier: 2.8.4
@@ -63,7 +63,7 @@ dependencies:
   env-vars-validator: 1.2.4
   graphql: 16.6.0
   next: 13.2.1_4pgn6omj4irpgog4tpnzary34q
-  next-protected-auth: 2.0.92_4pgn6omj4irpgog4tpnzary34q
+  next-protected-auth: 2.0.93_4pgn6omj4irpgog4tpnzary34q
   next-seo: 5.15.0_qgtcjgzkkjtbiyvnx7d32fl5vu
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -5176,8 +5176,8 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next-protected-auth/2.0.92_4pgn6omj4irpgog4tpnzary34q:
-    resolution: {integrity: sha512-BacpxEW71ywLVIkkd7Az2YyZ7XfIGqppqBklol3GEcMaGyWr1LBuvDR6ZwrJ8bZY9TfKDw4sZPTp2C5GnSSsmQ==}
+  /next-protected-auth/2.0.93_4pgn6omj4irpgog4tpnzary34q:
+    resolution: {integrity: sha512-G0pDZPrnxY9EWfUPPbUBmhSWHHtSbfGGt79GV+6FXbL3tdGXjmc3UuP2eY7KBLFZkCvn5YiWHJ55zhNp7fWOMw==}
     engines: {node: '>=10'}
     dependencies:
       next: 13.2.1_4pgn6omj4irpgog4tpnzary34q
