@@ -9,7 +9,7 @@ specifiers:
   '@graphql-codegen/typescript-operations': 3.0.1
   '@graphql-codegen/typescript-react-query': 4.1.0
   '@headlessui/react': 1.7.13
-  '@hookform/devtools': 4.3.0
+  '@hookform/devtools': 4.3.1
   '@hookform/resolvers': 2.9.11
   '@tailwindcss/forms': 0.5.3
   '@tailwindcss/line-clamp': 0.4.2
@@ -83,7 +83,7 @@ devDependencies:
   '@graphql-codegen/typescript': 3.0.1_graphql@16.6.0
   '@graphql-codegen/typescript-operations': 3.0.1_graphql@16.6.0
   '@graphql-codegen/typescript-react-query': 4.1.0_graphql@16.6.0
-  '@hookform/devtools': 4.3.0_etgemzlavky3k4ooobeqgg2miu
+  '@hookform/devtools': 4.3.1_etgemzlavky3k4ooobeqgg2miu
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.7
   '@types/node': 18.14.6
   '@types/react': 18.0.28
@@ -1676,8 +1676,8 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /@hookform/devtools/4.3.0_etgemzlavky3k4ooobeqgg2miu:
-    resolution: {integrity: sha512-DTTTYJ9j+L4Nd/qj0k41WNbRF/qNQfZxbHwUupFeQWu6JOJ5Ak5ksxuoCbfSWrsXV5EPSmcfhpsDos0IOlwhsg==}
+  /@hookform/devtools/4.3.1_etgemzlavky3k4ooobeqgg2miu:
+    resolution: {integrity: sha512-CrWxEoHQZaOXJZVQ8KBgOuAa8p2LI8M0DAN5GTRTmdCieRwFVjVDEmuTAVazWVRRkpEQSgSt3KYp7VmmqXdEnw==}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
       react-dom: ^16.8.0 || ^17 || ^18
