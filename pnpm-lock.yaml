@@ -41,7 +41,7 @@ specifiers:
   prettier-plugin-tailwindcss: 0.2.5
   react: 18.2.0
   react-dom: 18.2.0
-  react-hook-form: 7.43.7
+  react-hook-form: 7.43.8
   react-hot-toast: 2.4.0
   react-select: 5.7.2
   rosetty-react: 1.4.97
@@ -55,7 +55,7 @@ specifiers:
 
 dependencies:
   '@headlessui/react': 1.7.13_biqbaboplfbrettd7655fr4n2y
-  '@hookform/resolvers': 3.0.0_react-hook-form@7.43.7
+  '@hookform/resolvers': 3.0.0_react-hook-form@7.43.8
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.7
   '@tanstack/react-query': 4.28.0_biqbaboplfbrettd7655fr4n2y
   '@tanstack/react-query-devtools': 4.28.0_q4teel2yjbizrm4naiaqcdpjum
@@ -67,7 +67,7 @@ dependencies:
   next-seo: 5.15.0_ld2jel3hspngo3u5lti2kgl2sq
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  react-hook-form: 7.43.7_react@18.2.0
+  react-hook-form: 7.43.8_react@18.2.0
   react-hot-toast: 2.4.0_owo25xnefcwdq3zjgtohz6dbju
   react-select: 5.7.2_jtug4nzvsftympfhfjpljoxo4u
   rosetty-react: 1.4.97
@@ -1727,12 +1727,12 @@ packages:
       - '@types/react'
     dev: true
 
-  /@hookform/resolvers/3.0.0_react-hook-form@7.43.7:
+  /@hookform/resolvers/3.0.0_react-hook-form@7.43.8:
     resolution: {integrity: sha512-SQPefakODpyq25b/phHXDKCdRrEfPcCXV7B4nAa139wE1DxufYbbNAjeo0T04ZXBokRxZ+wD8iA1kkVMa3QwjQ==}
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
-      react-hook-form: 7.43.7_react@18.2.0
+      react-hook-form: 7.43.8_react@18.2.0
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:
@@ -5835,8 +5835,8 @@ packages:
       react: 18.2.0
       scheduler: 0.23.0
 
-  /react-hook-form/7.43.7_react@18.2.0:
-    resolution: {integrity: sha512-38yehQkQQ5uufaPKFScs7jhLE8n3+LG9H/BZfFAiBL2+7piDmw/BrdNJV4irzMaPnWZGhmGLHVICHXNVGIuXZg==}
+  /react-hook-form/7.43.8_react@18.2.0:
+    resolution: {integrity: sha512-BQm+Ge5KjTk1EchDBRhdP8Pkb7MArO2jFF+UWYr3rtvh6197khi22uloLqlWeuY02ItlCzPunPsFt1/q9wQKnw==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
