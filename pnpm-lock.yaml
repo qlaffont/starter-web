@@ -45,7 +45,7 @@ dependencies:
     version: 7.43.9(react@18.2.0)
   react-hot-toast:
     specifier: 2.4.0
-    version: 2.4.0(csstype@3.1.1)(react-dom@18.2.0)(react@18.2.0)
+    version: 2.4.0(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)
   react-select:
     specifier: 5.7.2
     version: 5.7.2(@babel/core@7.21.4)(@types/react@18.0.31)(react-dom@18.2.0)(react@18.2.0)
@@ -109,8 +109,8 @@ devDependencies:
     specifier: 10.4.14
     version: 10.4.14(postcss@8.4.21)
   csstype:
-    specifier: 3.1.1
-    version: 3.1.1
+    specifier: 3.1.2
+    version: 3.1.2
   eslint:
     specifier: 8.37.0
     version: 8.37.0
@@ -1027,7 +1027,7 @@ packages:
       '@emotion/memoize': 0.8.0
       '@emotion/unitless': 0.8.0
       '@emotion/utils': 1.2.0
-      csstype: 3.1.1
+      csstype: 3.1.2
 
   /@emotion/sheet@1.2.0:
     resolution: {integrity: sha512-OiTkRgpxescko+M51tZsMq7Puu/KP55wMT8BgpcXVG2hqXc0Vo0mfymJ/Uj24Hp0i083ji/o0aLddh08UEjq8w==}
@@ -2200,7 +2200,7 @@ packages:
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
-      csstype: 3.1.1
+      csstype: 3.1.2
 
   /@types/scheduler@0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
@@ -3144,8 +3144,8 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  /csstype@3.1.1:
-    resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
+  /csstype@3.1.2:
+    resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
 
   /damerau-levenshtein@1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
@@ -3282,7 +3282,7 @@ packages:
     resolution: {integrity: sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==}
     dependencies:
       '@babel/runtime': 7.19.0
-      csstype: 3.1.1
+      csstype: 3.1.2
     dev: false
 
   /dot-case@3.0.4:
@@ -4157,12 +4157,12 @@ packages:
     resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
     dev: true
 
-  /goober@2.1.11(csstype@3.1.1):
+  /goober@2.1.11(csstype@3.1.2):
     resolution: {integrity: sha512-5SS2lmxbhqH0u9ABEWq7WPU69a4i2pYcHeCxqaNq6Cw3mnrF0ghWNM4tEGid4dKy8XNIAUbuThuozDHHKJVh3A==}
     peerDependencies:
       csstype: ^3.0.10
     dependencies:
-      csstype: 3.1.1
+      csstype: 3.1.2
     dev: false
 
   /gopd@1.0.1:
@@ -5828,14 +5828,14 @@ packages:
       react: 18.2.0
     dev: false
 
-  /react-hot-toast@2.4.0(csstype@3.1.1)(react-dom@18.2.0)(react@18.2.0):
+  /react-hot-toast@2.4.0(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-qnnVbXropKuwUpriVVosgo8QrB+IaPJCpL8oBI6Ov84uvHZ5QQcTp2qg6ku2wNfgJl6rlQXJIQU5q+5lmPOutA==}
     engines: {node: '>=10'}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
     dependencies:
-      goober: 2.1.11(csstype@3.1.1)
+      goober: 2.1.11(csstype@3.1.2)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     transitivePeerDependencies:
