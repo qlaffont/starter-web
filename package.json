@@ -26,7 +26,7 @@
     "env-vars-validator": "1.2.20",
     "graphql": "16.6.0",
     "next": "13.2.4",
-    "next-protected-auth": "2.0.110",
+    "next-protected-auth": "2.0.111",
     "next-seo": "6.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
