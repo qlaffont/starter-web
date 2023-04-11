@@ -29,8 +29,8 @@ dependencies:
     specifier: 13.3.0
     version: 13.3.0(@babel/core@7.21.4)(react-dom@18.2.0)(react@18.2.0)(sass@1.61.0)
   next-protected-auth:
-    specifier: 2.0.116
-    version: 2.0.116(@babel/core@7.21.4)(react-dom@18.2.0)(react@18.2.0)(sass@1.61.0)
+    specifier: 2.0.118
+    version: 2.0.118(@babel/core@7.21.4)(react-dom@18.2.0)(react@18.2.0)(sass@1.61.0)
   next-seo:
     specifier: 6.0.0
     version: 6.0.0(next@13.3.0)(react-dom@18.2.0)(react@18.2.0)
@@ -5115,8 +5115,8 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next-protected-auth@2.0.116(@babel/core@7.21.4)(react-dom@18.2.0)(react@18.2.0)(sass@1.61.0):
-    resolution: {integrity: sha512-er87PuAUbipmF07zITQ0imqKr7YC1LYhMxA5Z1McpkjximjbhVseMTx7gLK5lw0Yq0PuHPrRP8SFFUD7dIMKRA==}
+  /next-protected-auth@2.0.118(@babel/core@7.21.4)(react-dom@18.2.0)(react@18.2.0)(sass@1.61.0):
+    resolution: {integrity: sha512-xwQfE3gt7MRqNmpfP7b6hW/bFaG4DdQcXxsxLPVNXIj1kZPGo9nv0HCgr9dqlpRg2TowMGQYz/5grAHeGSZyBA==}
     engines: {node: '>=10'}
     dependencies:
       next: 13.3.0(@babel/core@7.21.4)(react-dom@18.2.0)(react@18.2.0)(sass@1.61.0)
