@@ -40,8 +40,8 @@
   },
   "devDependencies": {
     "@babel/core": "7.21.8",
-    "@commitlint/cli": "17.6.1",
-    "@commitlint/config-conventional": "17.6.1",
+    "@commitlint/cli": "17.6.3",
+    "@commitlint/config-conventional": "17.6.3",
     "@graphql-codegen/cli": "3.3.1",
     "@graphql-codegen/typescript": "3.0.4",
     "@graphql-codegen/typescript-operations": "3.0.4",
