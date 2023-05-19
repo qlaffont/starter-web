@@ -20,8 +20,8 @@ dependencies:
     specifier: 1.2.1
     version: 1.2.1
   env-vars-validator:
-    specifier: 1.2.33
-    version: 1.2.33
+    specifier: 1.2.34
+    version: 1.2.34
   graphql:
     specifier: 16.6.0
     version: 16.6.0
@@ -3317,8 +3317,8 @@ packages:
       tapable: 2.2.1
     dev: true
 
-  /env-vars-validator@1.2.33:
-    resolution: {integrity: sha512-Y6pM0Gh1euoTeY7p135SdhVMKqjt+2pdYyDBrCgYyKKW14ncLAxps48g3lmyr68voF8NyCIJlkT555vPtTK1vQ==}
+  /env-vars-validator@1.2.34:
+    resolution: {integrity: sha512-QBXhja2jINyLX6Gq/qWJHqQTecQL+sBdVl39MKIucpIRsIBgaHqEnObDN8QhIh9Oc4xogpW8eNi0gzfXbAfuMQ==}
     engines: {node: '>=10'}
     dependencies:
       ajv: 8.11.0
