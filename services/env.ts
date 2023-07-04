@@ -7,11 +7,11 @@ export const env = createEnv({
   client: {
     NEXT_PUBLIC_API_URL: z.string().url(),
     NEXT_PUBLIC_GQL_URL: z.string().url(),
-    NEXT_PUBLIC_DEV: z.string(),
+    NEXT_PUBLIC_DEV: z.string().optional(),
   },
   server: {
     NODE_ENV: z.string().default('development'),
-    LOG: z.enum(['info', 'debug', 'error', 'silent', 'warning']),
+    LOG: z.enum(['info', 'debug', 'error', 'silent', 'warning']).default('info'),
     PORT: z
       .string()
       .default('3100')
