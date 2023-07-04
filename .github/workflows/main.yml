@@ -31,4 +31,4 @@ jobs:
         run: pnpm lint
 
       - name: Build
-        run: pnpm build
+        run: NEXT_PUBLIC_API_URL=http://localhost:3000 NEXT_PUBLIC_GQL_URL=http://localhost:3000/graphql pnpm build
