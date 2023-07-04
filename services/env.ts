@@ -7,7 +7,10 @@ export const env = createEnv({
   client: {
     NEXT_PUBLIC_API_URL: z.string().url(),
     NEXT_PUBLIC_GQL_URL: z.string().url(),
-    NEXT_PUBLIC_DEV: z.string().transform((s) => s !== 'false' && s !== '0'),
+    NEXT_PUBLIC_DEV: z
+      .string()
+      .transform((s) => s !== 'false' && s !== '0')
+      .optional(),
   },
   server: {
     NODE_ENV: z.string().default('development'),
