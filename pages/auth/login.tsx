@@ -1,6 +1,6 @@
 import { NextAuthProtectedLogin } from 'next-protected-auth';
 
-import { env } from '../../env.mjs';
+import { env } from '../../services/env';
 
 export default NextAuthProtectedLogin({
   authCallbackURL: '/auth',

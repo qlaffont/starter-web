@@ -1,6 +1,6 @@
 import { getAccessToken, getAndSaveAccessToken, removeAccessToken } from 'next-protected-auth';
 
-import { env } from '../../../env.mjs';
+import { env } from '../../env';
 import RestAPIService from '../RestAPIService';
 
 export const fetcher = ({

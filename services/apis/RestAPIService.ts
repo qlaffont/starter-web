@@ -1,6 +1,6 @@
 import { getAccessToken } from 'next-protected-auth';
 
-import { env } from '../../env.mjs';
+import { env } from '../env';
 
 const base = env.NEXT_PUBLIC_API_URL;
 

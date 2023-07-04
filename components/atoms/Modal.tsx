@@ -46,7 +46,7 @@ const Modal: FC<{
           >
             <div className="z-10 m-auto inline-block w-full max-w-xl transform rounded-lg bg-zinc-900 text-left align-middle shadow-xl transition-all">
               {/* eslint-disable-next-line react/no-unknown-property */}
-              <div className="h-max overflow-auto py-6 px-2 md:px-10" modal-content="true">
+              <div className="h-max overflow-auto px-2 py-6 md:px-10" modal-content="true">
                 <div className="mb-5 flex justify-between">
                   <span>
                     <i
