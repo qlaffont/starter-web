@@ -7,7 +7,7 @@ export const env = createEnv({
   client: {
     NEXT_PUBLIC_API_URL: z.string().url(),
     NEXT_PUBLIC_GQL_URL: z.string().url(),
-    NEXT_PUBLIC_DEV: z.string().optional(),
+    NEXT_PUBLIC_DEV: z.string().transform((s) => s !== 'false' && s !== '0'),
   },
   server: {
     NODE_ENV: z.string().default('development'),
@@ -19,11 +19,11 @@ export const env = createEnv({
   },
   runtimeEnv: {
     NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
-    NEXT_PUBLIC_GQL_URL: process.env.NEXT_PUBLIC_API_URL,
-    NEXT_PUBLIC_DEV: process.env.NEXT_PUBLIC_API_URL,
+    NEXT_PUBLIC_GQL_URL: process.env.NEXT_PUBLIC_GQL_URL,
+    NEXT_PUBLIC_DEV: process.env.NEXT_PUBLIC_DEV,
 
-    NODE_ENV: process.env.NEXT_PUBLIC_API_URL,
-    LOG: process.env.NEXT_PUBLIC_API_URL,
-    PORT: process.env.NEXT_PUBLIC_API_URL,
+    NODE_ENV: process.env.NODE_ENV,
+    LOG: process.env.LOG,
+    PORT: process.env.PORT,
   },
 });
