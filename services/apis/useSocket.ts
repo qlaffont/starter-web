@@ -2,7 +2,9 @@ import { getAccessToken } from 'next-protected-auth';
 import { useEffect, useState } from 'react';
 import { Manager, Socket } from 'socket.io-client';
 
-const base = process.env.NEXT_PUBLIC_API_URL as string;
+import { env } from '../../env.mjs';
+
+const base = env.NEXT_PUBLIC_API_URL as string;
 
 export const useSocket = () => {
   const [socket, setSocket] = useState<Socket | undefined>();

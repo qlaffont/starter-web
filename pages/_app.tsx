@@ -4,7 +4,6 @@ import '../scss/app.scss';
 import { Transition } from '@headlessui/react';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { isDevelopmentEnv } from 'env-vars-validator';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { NextAuthProvider, useNextAuthProtected, useNextAuthProtectedHandler } from 'next-protected-auth';
@@ -19,6 +18,7 @@ import { useI18n, useI18nSEO } from '../i18n/useI18n';
 // import { useGetUserMeQuery } from '../services/apis/gql/generated/graphql';
 import { reactQueryClient } from '../services/apis/react-query/reactQueryClient';
 import RestAPIService from '../services/apis/RestAPIService';
+import { isDevelopmentEnv } from '../services/env-helper';
 import { useDark } from '../services/useDark';
 
 const rosettyLocales = {

@@ -7,6 +7,8 @@
 //   experimental: { esmExternals: true },
 // });
 
+import './src/env.mjs';
+
 const nextConfig = {
   swcMinify: true,
   experimental: { esmExternals: true },
