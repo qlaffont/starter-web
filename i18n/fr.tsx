@@ -1,4 +1,5 @@
 import enDict from './en';
+import { ZodFr } from './zodFr';
 
 const lng: typeof enDict = {
   navbar: {},
@@ -35,6 +36,7 @@ const lng: typeof enDict = {
       hello: 'Bienvenue tout le monde !',
     },
   },
+  ...ZodFr,
 };
 
 export default lng;

@@ -1,3 +1,5 @@
+import { ZodEn } from './zodEn';
+
 const lng = {
   navbar: {},
   components: {
@@ -33,6 +35,7 @@ const lng = {
       hello: 'Hello world !',
     },
   },
+  ...ZodEn,
 };
 
 export default lng;
