@@ -67,7 +67,7 @@
     "lint-staged": "13.2.3",
     "postcss": "8.4.26",
     "prettier": "3.0.0",
-    "prettier-plugin-tailwindcss": "0.4.0",
+    "prettier-plugin-tailwindcss": "0.4.1",
     "sass": "1.63.6",
     "ts-node": "10.9.1",
     "typescript": "5.1.6",
