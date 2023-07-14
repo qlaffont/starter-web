@@ -35,7 +35,7 @@
     "react-select": "5.7.4",
     "rosetty-react": "1.4.163",
     "socket.io-client": "4.7.1",
-    "tailwindcss": "3.3.2",
+    "tailwindcss": "3.3.3",
     "usehooks-ts": "2.9.1",
     "zod": "^3.21.4",
     "zod-rosetty": "^1.0.0"
