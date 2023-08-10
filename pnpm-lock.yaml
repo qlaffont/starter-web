@@ -31,10 +31,10 @@ dependencies:
     version: 16.7.1
   next:
     specifier: 13.4.13
-    version: 13.4.13(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)(sass@1.64.2)
+    version: 13.4.13(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)(sass@1.65.1)
   next-protected-auth:
     specifier: 2.0.189
-    version: 2.0.189(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)(sass@1.64.2)
+    version: 2.0.189(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)(sass@1.65.1)
   next-seo:
     specifier: 6.1.0
     version: 6.1.0(next@13.4.13)(react-dom@18.2.0)(react@18.2.0)
@@ -155,8 +155,8 @@ devDependencies:
     specifier: 0.4.1
     version: 0.4.1(prettier@3.0.1)
   sass:
-    specifier: 1.64.2
-    version: 1.64.2
+    specifier: 1.65.1
+    version: 1.65.1
   ts-node:
     specifier: 10.9.1
     version: 10.9.1(@types/node@18.17.4)(typescript@5.1.6)
@@ -5190,11 +5190,11 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next-protected-auth@2.0.189(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)(sass@1.64.2):
+  /next-protected-auth@2.0.189(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)(sass@1.65.1):
     resolution: {integrity: sha512-qRtWAHqp+gAOiR59oTeDQaIwuXpp51Go21YALFFVxOoVXoV6+IzTj3MsQ0+7E6ho5gyMyStGAusHabuXt9eRcQ==}
     engines: {node: '>=10'}
     dependencies:
-      next: 13.4.13(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)(sass@1.64.2)
+      next: 13.4.13(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)(sass@1.65.1)
       react-test-renderer: 18.2.0(react@18.2.0)
       usehooks-ts: 2.9.1(react-dom@18.2.0)(react@18.2.0)
     transitivePeerDependencies:
@@ -5213,12 +5213,12 @@ packages:
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
     dependencies:
-      next: 13.4.13(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)(sass@1.64.2)
+      next: 13.4.13(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)(sass@1.65.1)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /next@13.4.13(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)(sass@1.64.2):
+  /next@13.4.13(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)(sass@1.65.1):
     resolution: {integrity: sha512-A3YVbVDNeXLhWsZ8Nf6IkxmNlmTNz0yVg186NJ97tGZqPDdPzTrHotJ+A1cuJm2XfuWPrKOUZILl5iBQkIf8Jw==}
     engines: {node: '>=16.8.0'}
     hasBin: true
@@ -5240,7 +5240,7 @@ packages:
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      sass: 1.64.2
+      sass: 1.65.1
       styled-jsx: 5.1.1(@babel/core@7.22.10)(react@18.2.0)
       watchpack: 2.4.0
       zod: 3.21.4
@@ -6156,8 +6156,8 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
-  /sass@1.64.2:
-    resolution: {integrity: sha512-TnDlfc+CRnUAgLO9D8cQLFu/GIjJIzJCGkE7o4ekIGQOH7T3GetiRR/PsTWJUHhkzcSPrARkPI+gNWn5alCzDg==}
+  /sass@1.65.1:
+    resolution: {integrity: sha512-9DINwtHmA41SEd36eVPQ9BJKpn7eKDQmUHmpI0y5Zv2Rcorrh0zS+cFrt050hdNbmmCNKTW3hV5mWfuegNRsEA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
