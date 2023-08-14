@@ -40,6 +40,9 @@ const lng: typeof enDict = {
     home: {
       hello: 'Bienvenue tout le monde !',
     },
+    exhibition: {
+      isButtonLoading: 'isButtonLoading',
+    },
   },
 };
 

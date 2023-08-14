@@ -71,7 +71,7 @@ export const Button = ({
         variantClassNames[variant],
         sizeClassNames[size],
         'hover:opacity-60',
-        disabled ? '!opacity-30' : '',
+        disabled || (isLoading && 'cursor-not-allowed !opacity-30'),
         className,
       )}
       disabled={disabled || isLoading}

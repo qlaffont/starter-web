@@ -38,6 +38,9 @@ const lng = {
     home: {
       hello: 'Hello world !',
     },
+    exhibition: {
+      isButtonLoading: 'isButtonLoading',
+    },
   },
 };
 
