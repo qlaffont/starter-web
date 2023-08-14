@@ -5,8 +5,8 @@ import { useForm, UseFormReturn } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { ObjectSchema } from 'yup';
 
-import { useI18n } from '../../../i18n/useI18n';
-import { yupI18n, yupValidatePhoneStrict } from '../../../i18n/validation';
+import { useI18n } from '../../../../i18n/useI18n';
+import { yupI18n, yupValidatePhoneStrict } from '../../../../i18n/validation';
 
 type InfoForm = {
   doesntHaveWhatsapp: boolean;
