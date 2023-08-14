@@ -68,6 +68,21 @@ export const usePhoneForm = (): HookReturn => {
     }
   }, [infoForm, isValid, t]);
 
+  // useEffect(() => {
+  //   if (user?.id) {
+  //     const { firstName, lastName, email, phoneNumber, whatsAppNumber } = user;
+
+  //     setValuesReactHookForm(infoForm.setValue, {
+  //       firstName,
+  //       lastName,
+  //       email,
+  //       phoneNumber,
+  //       whatsAppNumber,
+  //       doesntHaveWhatsapp: isEmpty(whatsAppNumber),
+  //     });
+  //   }
+  // }, [user?.id]);
+
   return {
     infoForm,
     isValid,

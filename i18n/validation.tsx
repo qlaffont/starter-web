@@ -1,6 +1,5 @@
 import { parsePhoneNumber } from 'awesome-phonenumber';
 import * as yup from 'yup';
-import { AnyObject } from 'yup/lib/types';
 
 yup.setLocale({
   mixed: {
@@ -94,7 +93,7 @@ export const useValidation = () => {
   };
 };
 
-export const yupValidatePhone = (schema: yup.StringSchema<string, AnyObject, string>) => {
+export const yupValidatePhone = (schema: yup.StringSchema<string, yup.AnyObject, string>) => {
   //@ts-ignore
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   return schema.test('checkPhoneFormat', 'yup.string.phone', (value, { parent }) => {
@@ -102,7 +101,7 @@ export const yupValidatePhone = (schema: yup.StringSchema<string, AnyObject, str
   });
 };
 
-export const yupValidatePhoneStrict = (schema: yup.StringSchema<string, AnyObject, string>) => {
+export const yupValidatePhoneStrict = (schema: yup.StringSchema<string, yup.AnyObject, string>) => {
   //@ts-ignore
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   return schema.test('checkPhoneFormat', 'yup.string.phone', (value, { parent }) => {

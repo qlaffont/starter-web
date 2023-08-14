@@ -102,6 +102,10 @@ const lng: typeof enDict = {
       phone2: 'phone2',
       dontHaveSecondPhone: "don't have second phone",
       fillSame: 'fill same',
+      oldPassword: 'old password',
+      newPassword: 'new password',
+      confirmPassword: 'confirm password',
+      invalidOldPassword: 'invalid old password',
     },
   },
 };

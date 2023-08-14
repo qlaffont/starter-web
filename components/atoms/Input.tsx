@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import React, { ComponentPropsWithoutRef, HTMLInputTypeAttribute, PropsWithoutRef, RefAttributes } from 'react';
 import { useMemo } from 'react';
 import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
+import { useSsr } from 'usehooks-ts';
 
 import { useI18n } from '../../i18n/useI18n';
 import { translateErrorMessage } from '../../i18n/validation';
@@ -94,6 +95,10 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
     return !!error;
   }, [error]);
 
+  const translatedError = translateErrorMessage({ message: error?.message }, t);
+
+  if (!!error && !translatedError) console.warn(`No translation was found for the key '${error.message}'`);
+
   return (
     <div className={clsx('relative block max-w-xl', className)}>
       {label && (
@@ -178,10 +183,39 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
             isError ? '!border-error !text-error' : 'text-white text-opacity-80',
           )}
           dangerouslySetInnerHTML={{
-            __html: translateErrorMessage({ message: error?.message }, t, undefined) || helperText,
+            __html: translatedError || helperText,
           }}
         ></p>
       )}
     </div>
+  );
+};
+
+type PasswordInputProps = InputProps & {
+  isVisible: boolean;
+  onVisibilityClick: () => void;
+  hideAutofill?: boolean;
+};
+
+export const PasswordInput = ({ isVisible, onVisibilityClick, hideAutofill, ...props }: PasswordInputProps) => {
+  const { isBrowser } = useSsr();
+  const isChrome = useMemo(() => {
+    if (!isBrowser) {
+      return false;
+    }
+
+    return /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+  }, [isBrowser]);
+
+  return (
+    <Input
+      type={isVisible ? 'text' : hideAutofill && isChrome ? 'text' : 'password'}
+      autoComplete={hideAutofill ? 'off' : props.autoComplete}
+      suffixIcon={clsx('icon', isVisible ? 'icon-eye' : 'icon-eye-off')}
+      suffixIconClassName={clsx(!isVisible && 'mt-4', 'cursor-pointer')}
+      onSuffixClick={onVisibilityClick}
+      inputClassName={clsx(props.inputClassName || '', hideAutofill && !isVisible && isChrome ? 'text-security' : '')}
+      {...props}
+    />
   );
 };

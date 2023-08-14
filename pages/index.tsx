@@ -3,6 +3,7 @@ import { useBoolean } from 'usehooks-ts';
 import { Button } from '../components/atoms/Button';
 import { Toggle } from '../components/atoms/Toggle';
 import { EmptyLayout } from '../components/layout/EmptyLayout';
+import { PasswordSection } from '../components/modules/demo/password/PasswordSection';
 import { PhoneSection } from '../components/modules/demo/phoneSection/PhoneSection';
 import { useI18n } from '../i18n/useI18n';
 
@@ -23,6 +24,8 @@ const Home = () => {
       </div>
 
       <PhoneSection />
+
+      <PasswordSection />
     </div>
   );
 };

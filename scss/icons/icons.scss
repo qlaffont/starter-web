@@ -14,7 +14,7 @@
     }
   }
 
-  $icons: 'en', 'fr', 'refresh';
+  $icons: 'en', 'fr', 'refresh', 'eye', 'eye-off';
 
   @each $icon in $icons {
     &.icon-#{$icon} {
