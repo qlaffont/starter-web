@@ -1,5 +1,6 @@
-import { isValid } from 'date-fns';
+import { parsePhoneNumber } from 'awesome-phonenumber';
 import * as yup from 'yup';
+import { AnyObject } from 'yup/lib/types';
 
 yup.setLocale({
   mixed: {
@@ -49,7 +50,11 @@ yup.setLocale({
 
 export const yupI18n = yup;
 
-export const translateErrorMessage = (error: { message: string } | undefined, t, format) => {
+/**
+ * Enables passing params to i18n dictionnary keys in the same string
+ * Example: 'my.key.in.i18n-{"key": "value"}'
+ */
+export const translateErrorMessage = (error: { message: string } | undefined, t) => {
   if (!error?.message || !t) {
     return undefined;
   }
@@ -70,11 +75,40 @@ export const translateErrorMessage = (error: { message: string } | undefined, t,
     if (Array.isArray(values[k])) {
       values[k] = values[k].join(', ');
     }
-
-    if (isValid(values[k])) {
-      values[k] = format(values[k], 'Pp');
-    }
   }
 
   return t(key, values);
+};
+
+export const useValidation = () => {
+  /** @see: https://stackoverflow.com/a/66817895 */
+  const onlyAlphabet = yupI18n
+    .string()
+    .matches(/^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s-]*)$/gi, 'yup.string.alphabet');
+
+  const onlyNumbers = yupI18n.string().matches(/(^\d+$)|^$/gi, 'yup.string.digits');
+
+  return {
+    onlyAlphabet,
+    onlyNumbers,
+  };
+};
+
+export const yupValidatePhone = (schema: yup.StringSchema<string, AnyObject, string>) => {
+  //@ts-ignore
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  return schema.test('checkPhoneFormat', 'yup.string.phone', (value, { parent }) => {
+    return parsePhoneNumber(value).regionCode !== undefined;
+  });
+};
+
+export const yupValidatePhoneStrict = (schema: yup.StringSchema<string, AnyObject, string>) => {
+  //@ts-ignore
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  return schema.test('checkPhoneFormat', 'yup.string.phone', (value, { parent }) => {
+    if (parsePhoneNumber(value).valid) {
+      return true;
+    }
+    return false;
+  });
 };
