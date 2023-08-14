@@ -19,7 +19,7 @@ const sizeClassNames = {
 
 const variantInputClassNames: Record<keyof typeof variantClassNames, string> = {
   normal:
-    'peer h-10 w-full text-black dark:text-white focus:outline-none bg-transparent !border-0 outline-none !shadow-none !ring-transparent',
+    'peer h-10 w-full text-white dark:text-black focus:outline-none bg-transparent !border-0 outline-none !shadow-none !ring-transparent',
 };
 
 const sizeInputClassNames: Record<keyof typeof sizeClassNames, string> = {
@@ -180,7 +180,7 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
         <p
           className={clsx(
             'mt-1 max-w-xl text-sm',
-            isError ? '!border-error !text-error' : 'text-white text-opacity-80',
+            isError ? '!border-error !text-error' : 'text-black text-opacity-80',
           )}
           dangerouslySetInnerHTML={{
             __html: translatedError || helperText,
