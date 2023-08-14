@@ -26,6 +26,12 @@ const lng = {
         noOptions: 'No element',
         loading: 'Loading',
       },
+      table: {
+        filterBy: 'Filter by',
+        search: 'Search',
+        unselectAll: 'Unselect all',
+        selectAll: 'Select all',
+      },
     },
   },
   pages: {

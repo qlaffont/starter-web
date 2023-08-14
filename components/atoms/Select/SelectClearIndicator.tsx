@@ -6,7 +6,7 @@ export const SelectClearIndicator = (props) => (
     {!props?.selectProps?.isClearable ? (
       <div className="hidden"></div>
     ) : (
-      <i className="icon icon-close block h-4 w-4 cursor-pointer bg-black dark:bg-white"></i>
+      <i className="icon icon-x block h-3 w-3 cursor-pointer bg-black dark:bg-white"></i>
     )}
   </components.ClearIndicator>
 );

@@ -8,7 +8,10 @@ export const SelectInput = (props) => {
     <Input
       variant="transparent"
       size={props.selectProps.size}
-      className={clsx('border-none !bg-transparent !shadow-none !outline-none !ring-transparent')}
+      className={clsx(
+        'border-none !bg-transparent !shadow-none !outline-none !ring-transparent',
+        props.selectProps.inputClassName || '',
+      )}
       placeholder={
         props.selectProps.value && props.selectProps.value !== 'none' ? undefined : props.selectProps.placeholder
       }

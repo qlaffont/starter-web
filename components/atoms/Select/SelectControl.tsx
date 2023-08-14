@@ -9,7 +9,7 @@ export const SelectControl = (props) => {
   return (
     <div
       className={clsx(
-        'relative z-0 flex items-center rounded-lg border',
+        'relative z-0 flex items-center rounded-lg',
         isError ? 'border-error' : 'border-dark-10 ',
         selectProps?.selectControlClassName ? selectProps.selectControlClassName : '',
       )}

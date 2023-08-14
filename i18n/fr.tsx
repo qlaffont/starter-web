@@ -28,6 +28,12 @@ const lng: typeof enDict = {
         noOptions: 'Aucun élement',
         loading: 'Chargement',
       },
+      table: {
+        filterBy: 'Filtrer par',
+        search: 'Rechercher',
+        unselectAll: 'Désélectionner tout',
+        selectAll: 'Sélectionner tout',
+      },
     },
   },
   pages: {
