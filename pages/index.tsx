@@ -1,6 +1,7 @@
 import { useBoolean } from 'usehooks-ts';
 
 import { Button } from '../components/atoms/Button';
+import Checkbox from '../components/atoms/Checkbox';
 import { Toggle } from '../components/atoms/Toggle';
 import { EmptyLayout } from '../components/layout/EmptyLayout';
 import { PasswordSection } from '../components/modules/demo/password/PasswordSection';
@@ -11,6 +12,7 @@ const Home = () => {
   const { t } = useI18n();
 
   const { value: isToggleOn, toggle: toggleIsToggleOn } = useBoolean(false);
+  const { value: isChecked, toggle: toggleIsChecked } = useBoolean(false);
 
   return (
     <div className="grid h-full w-full grid-cols-4 gap-3">
@@ -26,6 +28,8 @@ const Home = () => {
       <PhoneSection />
 
       <PasswordSection />
+
+      <Checkbox value={isChecked} onChange={toggleIsChecked} />
     </div>
   );
 };

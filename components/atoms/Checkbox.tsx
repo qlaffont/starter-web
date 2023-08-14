@@ -39,8 +39,8 @@ const Checkbox: React.FC<CheckboxProps> = ({
         readOnly={onChange == undefined}
         className={clsx(
           rounded ? 'rounded-xl' : 'rounded-md',
-          'border-dark-3 h-6 w-6 outline-none',
-          'text-primary cursor-pointer focus:ring-0 focus:ring-offset-0',
+          'h-6 w-6 border-black outline-none',
+          'text-green cursor-pointer focus:ring-0 focus:ring-offset-0',
           'transition duration-300 ease-in-out',
           className,
         )}
