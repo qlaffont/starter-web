@@ -1,5 +1,5 @@
 import { Dialog, Transition } from '@headlessui/react';
-import clsx from 'clsx';
+import cx from 'classix';
 import { FC } from 'react';
 import { Fragment, useRef } from 'react';
 
@@ -50,7 +50,7 @@ const Modal: FC<{
                 <div className="mb-5 flex justify-between">
                   <span>
                     <i
-                      className={clsx(
+                      className={cx(
                         'icon icon-arrow-back block h-6 w-6 cursor-pointer',
                         onBackClick ? 'bg-dark-20' : 'bg-transparent',
                       )}
@@ -58,7 +58,7 @@ const Modal: FC<{
                     ></i>
                   </span>
                   <div>
-                    <Dialog.Title className="text-2xl font-bold text-white line-clamp-1">{title}</Dialog.Title>
+                    <Dialog.Title className="line-clamp-1 text-2xl font-bold text-white">{title}</Dialog.Title>
                   </div>
                   <div>
                     <button

@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import cx from 'classix';
 import React from 'react';
 import { useMemo } from 'react';
 import { RefCallBack } from 'react-hook-form';
@@ -93,14 +93,14 @@ export const SelectComponent: React.FC<Props> = ({
   );
 
   return (
-    <div className={clsx(className, 'max-w-xl')}>
+    <div className={cx(className, 'max-w-xl')}>
       {label && (
-        <p className={clsx('block pb-2', error ? '!text-error' : 'text-black dark:text-white')}>
+        <p className={cx('block pb-2', error ? '!text-error' : 'text-black dark:text-white')}>
           {required ? `${label} *` : label}
         </p>
       )}
       {/* @ts-ignore */}
-      <div className={clsx(disabled ? '!cursor-not-allowed opacity-50' : '')}>
+      <div className={cx(disabled ? '!cursor-not-allowed opacity-50' : '')}>
         <SelectCmp
           styles={{ menuPortal: (base) => ({ ...base, zIndex: 9999 }) }}
           menuPortalTarget={typeof document !== 'undefined' ? document?.body : undefined}
@@ -139,7 +139,7 @@ export const SelectComponent: React.FC<Props> = ({
         />
       </div>
       {(!!error || helperText) && (
-        <p className={clsx('mt-1 text-sm', error ? '!border-error !text-error' : 'text-dark-60')}>
+        <p className={cx('mt-1 text-sm', error ? '!border-error !text-error' : 'text-dark-60')}>
           {error || helperText}
         </p>
       )}

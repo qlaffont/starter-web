@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import clsx from 'clsx';
+import cx from 'classix';
 import React, { ComponentPropsWithoutRef, PropsWithoutRef, RefAttributes } from 'react';
 import { useMemo } from 'react';
 import { UseFormRegisterReturn } from 'react-hook-form';
@@ -84,11 +84,11 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
   }, [error]);
 
   return (
-    <div className={clsx('relative block max-w-xl', className)}>
+    <div className={cx('relative block max-w-xl', className)}>
       {label && (
         <label
           htmlFor={name}
-          className={clsx(
+          className={cx(
             'block pb-1 text-black dark:text-white',
             variantLabelClassNames[variant],
             isError ? ' !text-error' : '',
@@ -101,7 +101,7 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
       )}
 
       <div
-        className={clsx(
+        className={cx(
           'flex w-full items-center gap-2 px-2 ',
           variantClassNames[variant],
           sizeClassNames[size],
@@ -112,7 +112,7 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
         {prefixIcon && (
           <div>
             <i
-              className={clsx(
+              className={cx(
                 'icon bg-dark-100 block h-5 w-5',
                 `icon-${prefixIcon}`,
                 prefixIconClassName,
@@ -127,7 +127,7 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
             id={name}
             name={name}
             type={type}
-            className={clsx(
+            className={cx(
               'px-0',
               variantInputClassNames[variant],
               sizeInputClassNames[size],
@@ -145,7 +145,7 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
         {suffixIcon && (
           <div>
             <i
-              className={clsx(
+              className={cx(
                 'icon block h-5 w-5 bg-white',
                 `icon-${suffixIcon}`,
                 suffixIconClassName,
@@ -158,7 +158,7 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
       </div>
       {(!!error || helperText) && (
         <p
-          className={clsx('mt-1 text-sm', isError ? '!border-error !text-error' : 'text-white text-opacity-80')}
+          className={cx('mt-1 text-sm', isError ? '!border-error !text-error' : 'text-white text-opacity-80')}
           dangerouslySetInnerHTML={{ __html: error || helperText }}
         ></p>
       )}

@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import cx from 'classix';
 import React from 'react';
 
 const sizeClassNames = {
@@ -55,7 +55,7 @@ export const Button: React.FC<{
   ...props
 }) => (
   <button
-    className={clsx(
+    className={cx(
       'flex items-center justify-center gap-2',
       'rounded-md',
       variantClassNames[variant],
@@ -71,14 +71,14 @@ export const Button: React.FC<{
     {isLoading && (
       <div>
         <i
-          className={clsx('icon icon-refresh animate block', iconSizeClassNames[size], iconVariantClassNames[variant])}
+          className={cx('icon icon-refresh animate block', iconSizeClassNames[size], iconVariantClassNames[variant])}
         ></i>
       </div>
     )}
     {prefixIcon && (
       <div onClick={onClickPrefix}>
         <i
-          className={clsx(
+          className={cx(
             'block',
             `${prefixIcon}`,
             iconVariantClassNames[variant],
@@ -94,7 +94,7 @@ export const Button: React.FC<{
     {suffixIcon && (
       <div onClick={onClickSuffix}>
         <i
-          className={clsx(
+          className={cx(
             'block',
             `${suffixIcon}`,
             iconVariantClassNames[variant],
