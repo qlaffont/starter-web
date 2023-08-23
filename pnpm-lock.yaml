@@ -55,7 +55,7 @@ dependencies:
     version: 2.4.1(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)
   react-select:
     specifier: 5.7.4
-    version: 5.7.4(@babel/core@7.22.10)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
+    version: 5.7.4(@babel/core@7.22.10)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)
   rosetty-react:
     specifier: 2.0.5
     version: 2.0.5
@@ -99,7 +99,7 @@ devDependencies:
     version: 4.1.0(graphql@16.8.0)
   '@hookform/devtools':
     specifier: 4.3.1
-    version: 4.3.1(@babel/core@7.22.10)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
+    version: 4.3.1(@babel/core@7.22.10)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)
   '@tailwindcss/line-clamp':
     specifier: 0.4.4
     version: 0.4.4(tailwindcss@3.3.3)
@@ -107,8 +107,8 @@ devDependencies:
     specifier: 18.17.8
     version: 18.17.8
   '@types/react':
-    specifier: 18.2.20
-    version: 18.2.20
+    specifier: 18.2.21
+    version: 18.2.21
   '@types/react-dom':
     specifier: 18.2.7
     version: 18.2.7
@@ -1080,7 +1080,7 @@ packages:
   /@emotion/memoize@0.8.0:
     resolution: {integrity: sha512-G/YwXTkv7Den9mXDO7AhLWkE3q+I92B+VqAE+dYG4NGPaHZGvt3G8Q0p9vmE+sq7rTGphUbAvmQ9YpbfMQGGlA==}
 
-  /@emotion/react@11.10.4(@babel/core@7.22.10)(@types/react@18.2.20)(react@18.2.0):
+  /@emotion/react@11.10.4(@babel/core@7.22.10)(@types/react@18.2.21)(react@18.2.0):
     resolution: {integrity: sha512-j0AkMpr6BL8gldJZ6XQsQ8DnS9TxEQu1R+OGmDZiWjBAJtCcbt0tS3I/YffoqHXxH6MjgI7KdMbYKw3MEiU9eA==}
     peerDependencies:
       '@babel/core': ^7.0.0
@@ -1100,7 +1100,7 @@ packages:
       '@emotion/use-insertion-effect-with-fallbacks': 1.0.0(react@18.2.0)
       '@emotion/utils': 1.2.0
       '@emotion/weak-memoize': 0.3.0
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
       hoist-non-react-statics: 3.3.2
       react: 18.2.0
 
@@ -1116,7 +1116,7 @@ packages:
   /@emotion/sheet@1.2.0:
     resolution: {integrity: sha512-OiTkRgpxescko+M51tZsMq7Puu/KP55wMT8BgpcXVG2hqXc0Vo0mfymJ/Uj24Hp0i083ji/o0aLddh08UEjq8w==}
 
-  /@emotion/styled@11.10.4(@babel/core@7.22.10)(@emotion/react@11.10.4)(@types/react@18.2.20)(react@18.2.0):
+  /@emotion/styled@11.10.4(@babel/core@7.22.10)(@emotion/react@11.10.4)(@types/react@18.2.21)(react@18.2.0):
     resolution: {integrity: sha512-pRl4R8Ez3UXvOPfc2bzIoV8u9P97UedgHS4FPX594ntwEuAMA114wlaHvOK24HB48uqfXiGlYIZYCxVJ1R1ttQ==}
     peerDependencies:
       '@babel/core': ^7.0.0
@@ -1133,11 +1133,11 @@ packages:
       '@babel/runtime': 7.19.0
       '@emotion/babel-plugin': 11.10.2(@babel/core@7.22.10)
       '@emotion/is-prop-valid': 1.2.0
-      '@emotion/react': 11.10.4(@babel/core@7.22.10)(@types/react@18.2.20)(react@18.2.0)
+      '@emotion/react': 11.10.4(@babel/core@7.22.10)(@types/react@18.2.21)(react@18.2.0)
       '@emotion/serialize': 1.1.0
       '@emotion/use-insertion-effect-with-fallbacks': 1.0.0(react@18.2.0)
       '@emotion/utils': 1.2.0
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
       react: 18.2.0
     dev: true
 
@@ -1874,14 +1874,14 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@hookform/devtools@4.3.1(@babel/core@7.22.10)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0):
+  /@hookform/devtools@4.3.1(@babel/core@7.22.10)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-CrWxEoHQZaOXJZVQ8KBgOuAa8p2LI8M0DAN5GTRTmdCieRwFVjVDEmuTAVazWVRRkpEQSgSt3KYp7VmmqXdEnw==}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
       react-dom: ^16.8.0 || ^17 || ^18
     dependencies:
-      '@emotion/react': 11.10.4(@babel/core@7.22.10)(@types/react@18.2.20)(react@18.2.0)
-      '@emotion/styled': 11.10.4(@babel/core@7.22.10)(@emotion/react@11.10.4)(@types/react@18.2.20)(react@18.2.0)
+      '@emotion/react': 11.10.4(@babel/core@7.22.10)(@types/react@18.2.21)(react@18.2.0)
+      '@emotion/styled': 11.10.4(@babel/core@7.22.10)(@emotion/react@11.10.4)(@types/react@18.2.21)(react@18.2.0)
       '@types/lodash': 4.14.185
       little-state-machine: 4.7.0(react@18.2.0)
       lodash: 4.17.21
@@ -2269,17 +2269,17 @@ packages:
   /@types/react-dom@18.2.7:
     resolution: {integrity: sha512-GRaAEriuT4zp9N4p1i8BDBYmEyfo+xQ3yHjJU4eiK5NDa1RmUZG+unZABUTK4/Ox/M+GaHwb6Ow8rUITrtjszA==}
     dependencies:
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
     dev: true
 
   /@types/react-transition-group@4.4.5:
     resolution: {integrity: sha512-juKD/eiSM3/xZYzjuzH6ZwpP+/lejltmiS3QEzV/vmb/Q8+HfDmxu+Baga8UEMGBqV88Nbg4l2hY/K2DkyaLLA==}
     dependencies:
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
     dev: false
 
-  /@types/react@18.2.20:
-    resolution: {integrity: sha512-WKNtmsLWJM/3D5mG4U84cysVY31ivmyw85dE84fOCk5Hx78wezB/XEjVPWl2JTZ5FkEeaTJf+VgUAUn3PE7Isw==}
+  /@types/react@18.2.21:
+    resolution: {integrity: sha512-neFKG/sBAwGxHgXiIxnbm3/AAVQ/cMRS93hvBpg8xYRbeQSPVABp9U2bRnPf0iI4+Ucdv3plSxKK+3CW2ENJxA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
@@ -5848,7 +5848,7 @@ packages:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: false
 
-  /react-select@5.7.4(@babel/core@7.22.10)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0):
+  /react-select@5.7.4(@babel/core@7.22.10)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-NhuE56X+p9QDFh4BgeygHFIvJJszO1i1KSkg/JPcIJrbovyRtI+GuOEa4XzFCEpZRAEoEI8u/cAHK+jG/PgUzQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -5856,7 +5856,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.19.0
       '@emotion/cache': 11.10.3
-      '@emotion/react': 11.10.4(@babel/core@7.22.10)(@types/react@18.2.20)(react@18.2.0)
+      '@emotion/react': 11.10.4(@babel/core@7.22.10)(@types/react@18.2.21)(react@18.2.0)
       '@floating-ui/dom': 1.0.2
       '@types/react-transition-group': 4.4.5
       memoize-one: 6.0.0
@@ -5864,7 +5864,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-transition-group: 4.4.5(react-dom@18.2.0)(react@18.2.0)
-      use-isomorphic-layout-effect: 1.1.2(@types/react@18.2.20)(react@18.2.0)
+      use-isomorphic-layout-effect: 1.1.2(@types/react@18.2.21)(react@18.2.0)
     transitivePeerDependencies:
       - '@babel/core'
       - '@types/react'
@@ -6925,7 +6925,7 @@ packages:
       react: 18.2.0
     dev: true
 
-  /use-isomorphic-layout-effect@1.1.2(@types/react@18.2.20)(react@18.2.0):
+  /use-isomorphic-layout-effect@1.1.2(@types/react@18.2.21)(react@18.2.0):
     resolution: {integrity: sha512-49L8yCO3iGT/ZF9QttjwLF/ZD9Iwto5LnH5LmEdk/6cFmXddqi2ulF0edxTwjj+7mqvpVVGQWvbXZdn32wRSHA==}
     peerDependencies:
       '@types/react': '*'
@@ -6934,7 +6934,7 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
       react: 18.2.0
     dev: false
 
