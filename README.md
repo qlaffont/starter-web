@@ -1,5 +1,8 @@
 # STARTER WEB
 
+Used by :
+- [Flexper](https://github.com/flexper)
+
 ## Server requirements
 
 - Node (Please check .nvmrc to get Node.JS version)

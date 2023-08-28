@@ -1,3 +1,5 @@
+import { ZodEn } from './zodEn';
+
 const lng = {
   yup: {
     mixed: {
@@ -106,6 +108,7 @@ const lng = {
       invalidOldPassword: 'invalid old password',
     },
   },
+  ...ZodEn,
 };
 
 export default lng;

@@ -21,7 +21,7 @@
     "incremental": true,
   },
   "include": [
-    "next-env.d.ts",
+    "services/next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],

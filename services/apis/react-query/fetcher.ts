@@ -1,5 +1,6 @@
 import { getAccessToken, getAndSaveAccessToken, removeAccessToken } from 'next-protected-auth';
 
+import { env } from '../../env';
 import RestAPIService from '../RestAPIService';
 
 export const fetcher = ({
@@ -11,7 +12,7 @@ export const fetcher = ({
   headers?: HeadersInit;
   body?: BodyInit | null;
 }) => {
-  return fetch(`${process.env.NEXT_PUBLIC_GQL_URL}`, {
+  return fetch(`${env.NEXT_PUBLIC_GQL_URL}`, {
     method,
     headers,
     body,

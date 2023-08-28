@@ -1,122 +1,85 @@
 import { Dialog, Transition } from '@headlessui/react';
-import React, { Fragment, useMemo } from 'react';
-import { useWindowSize } from 'usehooks-ts';
+import cx from 'classix';
+import { FC } from 'react';
+import { Fragment, useRef } from 'react';
 
-import { Button } from './Button';
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+const emptyFunction = () => {};
 
-export interface ModalProps {
+const Modal: FC<{
+  children;
   isOpen: boolean;
-  hideModal: () => void;
-}
-
-interface Props extends ModalProps {
-  isOpen: boolean;
-  hideModal: () => void;
-  closeText: string;
-  canGoPrevious?: boolean;
-  canGoNext?: boolean;
-  onPreviousClick?: () => void;
-  onNextClick?: () => void;
-}
-
-export const Modal = ({
-  isOpen,
-  hideModal,
-  closeText,
-  children,
-  canGoNext,
-  canGoPrevious,
-  onPreviousClick,
-  onNextClick,
-}: React.PropsWithChildren<Props>) => {
-  const { width, height } = useWindowSize();
-
-  const modalIsOpen = useMemo(() => {
-    if ((width && width < 1024) || (height && height < 768)) {
-      return false;
-    }
-
-    return isOpen;
-  }, [isOpen, width, height]);
+  onClose: (event?: any) => void;
+  title?: string;
+  onBackClick?: () => void;
+}> = ({ children, isOpen, onClose, title = '', onBackClick }) => {
+  const closeButtonRef = useRef(null);
   return (
-    <Transition show={modalIsOpen} as={Fragment}>
-      <Dialog as="div" static className="relative z-50" open={modalIsOpen} onClose={hideModal}>
+    <Transition.Root show={isOpen} as={Fragment}>
+      <Dialog
+        as="div"
+        static
+        className="fixed inset-0 z-10 overflow-y-auto"
+        initialFocus={closeButtonRef}
+        open={isOpen}
+        onClose={emptyFunction}
+      >
         <div className="flex min-h-screen items-end justify-center px-1 text-center sm:block sm:p-0">
+          <Dialog.Overlay />
+          <div
+            className="fixed inset-0 bg-zinc-900 bg-opacity-50 backdrop-blur backdrop-filter transition-opacity"
+            onClick={onClose}
+          />
+
+          {/* This element is to trick the browser into centering the modal contents. */}
+          <span className="hidden sm:inline-block sm:h-screen sm:align-middle" aria-hidden="true">
+            &#8203;
+          </span>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
+            enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            enterTo="opacity-100 translate-y-0 sm:scale-100"
             leave="ease-in duration-200"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
+            leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+            leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
-            <div className="fixed inset-0 bg-[#06080D] bg-opacity-50 transition-opacity" onClick={hideModal} />
-          </Transition.Child>
-
-          <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
-              <Transition.Child
-                as={Fragment}
-                enter="ease-out duration-300"
-                enterFrom="opacity-0 scale-95"
-                enterTo="opacity-100 scale-100"
-                leave="ease-in duration-200"
-                leaveFrom="opacity-100 scale-100"
-                leaveTo="opacity-0 scale-95"
-              >
-                <Dialog.Panel className="transform text-left align-middle transition-all">
-                  <div className="flex w-full items-center gap-3">
-                    <div className="h-11 w-11">
-                      {canGoPrevious ? (
-                        <Button
-                          variant="borderGray100"
-                          prefixIcon="icon icon-chevron-down rotate-90 !bg-primary-100 !h-6 !w-6"
-                          className="h-11 w-11 bg-white !px-2 leading-none hover:!opacity-90"
-                          onClick={onPreviousClick}
-                        ></Button>
-                      ) : (
-                        <div className="h-11 w-11"></div>
+            <div className="z-10 m-auto inline-block w-full max-w-xl transform rounded-lg bg-zinc-900 text-left align-middle shadow-xl transition-all">
+              {/* eslint-disable-next-line react/no-unknown-property */}
+              <div className="h-max overflow-auto px-2 py-6 md:px-10" modal-content="true">
+                <div className="mb-5 flex justify-between">
+                  <span>
+                    <i
+                      className={cx(
+                        'icon icon-arrow-back block h-6 w-6 cursor-pointer',
+                        onBackClick ? 'bg-dark-20' : 'bg-transparent',
                       )}
-                    </div>
-
-                    <div className="grow space-y-3">
-                      <div className="flex justify-end">
-                        <div>
-                          <Button
-                            variant="borderGray100"
-                            prefixIcon="icon icon-x -rotate-90"
-                            className="bg-white leading-none hover:!opacity-90"
-                            size="closeModal"
-                            onClick={hideModal}
-                          >
-                            {closeText}
-                          </Button>
-                        </div>
-                      </div>
-
-                      <div className="rounded-md bg-white">{children}</div>
-                    </div>
-
-                    <div className="w-11">
-                      {canGoNext ? (
-                        <Button
-                          variant="borderGray100"
-                          prefixIcon="icon icon-chevron-down -rotate-90 !bg-primary-100 !h-6 !w-6"
-                          className="h-11 w-11 bg-white !px-2 leading-none hover:!opacity-90"
-                          onClick={onNextClick}
-                        ></Button>
-                      ) : (
-                        <div className="h-11 w-11"></div>
-                      )}
-                    </div>
+                      onClick={() => onBackClick && onBackClick()}
+                    ></i>
+                  </span>
+                  <div>
+                    <Dialog.Title className="text-2xl font-bold text-white line-clamp-1">{title}</Dialog.Title>
                   </div>
-                </Dialog.Panel>
-              </Transition.Child>
+                  <div>
+                    <button
+                      className="icon icon-close bg-dark-20 block h-6 w-6 cursor-pointer"
+                      onClick={onClose}
+                      ref={closeButtonRef}
+                    ></button>
+                  </div>
+                </div>
+                <div className="text-dark relative z-20 !max-h-full w-full dark:text-white">{children}</div>
+              </div>
             </div>
-          </div>
+          </Transition.Child>
         </div>
       </Dialog>
-    </Transition>
+    </Transition.Root>
   );
 };
+
+export const scrollToTopModal = () => {
+  document.querySelector('[modal-content]')?.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+export default Modal;

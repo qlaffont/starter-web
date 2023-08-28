@@ -1,6 +1,7 @@
-import { isDevelopmentEnv } from 'env-vars-validator';
 import dynamic from 'next/dynamic';
 import { useSsr } from 'usehooks-ts';
+
+import { isDevelopmentEnv } from '../../services/env-helper';
 
 const DevTool = dynamic(() => import('@hookform/devtools').then((mod) => mod.DevTool), { ssr: false });
 

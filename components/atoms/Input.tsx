@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import clsx from 'clsx';
-import React, { ComponentPropsWithoutRef, HTMLInputTypeAttribute, PropsWithoutRef, RefAttributes } from 'react';
+import cx from 'classix';
+import React, { ComponentPropsWithoutRef, PropsWithoutRef, RefAttributes } from 'react';
 import { useMemo } from 'react';
 import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
 import { useSsr } from 'usehooks-ts';
@@ -100,12 +100,12 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
   if (!!error && !translatedError) console.warn(`No translation was found for the key '${error.message}'`);
 
   return (
-    <div className={clsx('relative block max-w-xl', className)}>
+    <div className={cx('relative block max-w-xl', className)}>
       {label && (
         <label
           htmlFor={name}
-          className={clsx(
-            'text-primary-100 block max-w-xl pb-1 text-sm',
+          className={cx(
+            'block pb-1 text-black dark:text-white',
             variantLabelClassNames[variant],
             isError ? ' !text-error' : '',
             labelClassName,
@@ -117,7 +117,7 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
       )}
 
       <div
-        className={clsx(
+        className={cx(
           'flex w-full items-center gap-2 px-2 ',
           variantClassNames[variant],
           sizeClassNames[size],
@@ -128,11 +128,9 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
         {prefixIcon && (
           <div>
             <i
-              className={clsx(
-                'block',
-                `${prefixIcon}`,
-                iconVariantClassNames[variant],
-                iconSizeClassNames[size],
+              className={cx(
+                'icon bg-dark-100 block h-5 w-5',
+                `icon-${prefixIcon}`,
                 prefixIconClassName,
                 onPrefixClick ? (disabled ? 'cursor-not-allowed' : 'cursor-pointer') : '',
               )}
@@ -145,7 +143,7 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
             id={name}
             name={name}
             type={type}
-            className={clsx(
+            className={cx(
               'px-0',
               variantInputClassNames[variant],
               sizeInputClassNames[size],
@@ -163,11 +161,9 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
         {suffixIcon && (
           <div>
             <i
-              className={clsx(
-                'block',
-                `${suffixIcon}`,
-                iconVariantClassNames[variant],
-                iconSizeClassNames[size],
+              className={cx(
+                'icon block h-5 w-5 bg-white',
+                `icon-${suffixIcon}`,
                 suffixIconClassName,
                 onSuffixClick ? (disabled ? 'cursor-not-allowed' : 'cursor-pointer') : '',
               )}
@@ -178,13 +174,8 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
       </div>
       {(!!error || helperText) && (
         <p
-          className={clsx(
-            'mt-1 max-w-xl text-sm',
-            isError ? '!border-error !text-error' : 'text-black text-opacity-80',
-          )}
-          dangerouslySetInnerHTML={{
-            __html: translatedError || helperText,
-          }}
+          className={cx('mt-1 text-sm', isError ? '!border-error !text-error' : 'text-white text-opacity-80')}
+          dangerouslySetInnerHTML={{ __html: error || helperText }}
         ></p>
       )}
     </div>

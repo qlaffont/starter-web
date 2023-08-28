@@ -1,6 +1,8 @@
 import { getAccessToken } from 'next-protected-auth';
 
-const base = process.env.NEXT_PUBLIC_API_URL;
+import { env } from '../env';
+
+const base = env.NEXT_PUBLIC_API_URL;
 
 class RestAPIService {
   static login = `${base}/auth/login`;

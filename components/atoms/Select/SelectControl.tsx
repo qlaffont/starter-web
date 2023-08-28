@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import cx from 'classix';
 import { useMemo } from 'react';
 import { components } from 'react-select';
 
@@ -8,8 +8,8 @@ export const SelectControl = (props) => {
   const isError = useMemo(() => !!selectProps.error, [selectProps.error]);
   return (
     <div
-      className={clsx(
-        'relative z-0 flex items-center rounded-lg',
+      className={cx(
+        'relative z-0 flex items-center rounded-lg border',
         isError ? 'border-error' : 'border-dark-10 ',
         selectProps?.selectControlClassName ? selectProps.selectControlClassName : '',
       )}

@@ -1,4 +1,5 @@
 import enDict from './en';
+import { ZodFr } from './zodFr';
 
 const lng: typeof enDict = {
   yup: {
@@ -108,6 +109,7 @@ const lng: typeof enDict = {
       invalidOldPassword: 'invalid old password',
     },
   },
+  ...ZodFr,
 };
 
 export default lng;

@@ -1,5 +1,5 @@
-import clsx from 'clsx';
-import React, { useMemo } from 'react';
+import cx from 'classix';
+import React from 'react';
 
 const sizeClassNames = {
   content: '',
@@ -59,65 +59,56 @@ export const Button = ({
   suffixIcon,
   onClickSuffix,
   ...props
-}: Props) => {
-  const TagCMP = useMemo(
-    () => (as === 'button' ? (props) => <button {...props} /> : (props) => <div {...props} />),
-    [as],
-  );
-  return (
-    <TagCMP
-      className={clsx(
-        'flex items-center justify-center gap-2',
-        variantClassNames[variant],
-        sizeClassNames[size],
-        'hover:opacity-60',
-        disabled || (isLoading && 'cursor-not-allowed !opacity-30'),
-        className,
-      )}
-      disabled={disabled || isLoading}
-      type={type}
-      {...props}
-    >
-      {isLoading && (
-        <div>
-          <i
-            className={clsx(
-              'icon icon-refresh animate block',
-              iconSizeClassNames[size],
-              iconVariantClassNames[variant],
-            )}
-          ></i>
-        </div>
-      )}
-      {prefixIcon && (
-        <div onClick={onClickPrefix}>
-          <i
-            className={clsx(
-              'block',
-              `${prefixIcon}`,
-              iconVariantClassNames[variant],
-              iconSizeClassNames[size],
-              prefixIconClassName,
-            )}
-          ></i>
-        </div>
-      )}
+}) => (
+  <button
+    className={cx(
+      'flex items-center justify-center gap-2',
+      'rounded-md',
+      variantClassNames[variant],
+      sizeClassNames[size],
+      'hover:opacity-60',
+      disabled ? '!opacity-30' : '',
+      className,
+    )}
+    disabled={disabled || isLoading}
+    type={type}
+    {...props}
+  >
+    {isLoading && (
+      <div>
+        <i
+          className={clsx('icon icon-refresh animate block', iconSizeClassNames[size], iconVariantClassNames[variant])}
+        ></i>
+      </div>
+    )}
+    {prefixIcon && (
+      <div onClick={onClickPrefix}>
+        <i
+          className={clsx(
+            'block',
+            `${prefixIcon}`,
+            iconVariantClassNames[variant],
+            iconSizeClassNames[size],
+            prefixIconClassName,
+          )}
+        ></i>
+      </div>
+    )}
 
       {children && <p>{children}</p>}
 
-      {suffixIcon && (
-        <div onClick={onClickSuffix}>
-          <i
-            className={clsx(
-              'block',
-              `${suffixIcon}`,
-              iconVariantClassNames[variant],
-              iconSizeClassNames[size],
-              suffixIconClassName,
-            )}
-          ></i>
-        </div>
-      )}
-    </TagCMP>
-  );
-};
+    {suffixIcon && (
+      <div onClick={onClickSuffix}>
+        <i
+          className={cx(
+            'block',
+            `${suffixIcon}`,
+            iconVariantClassNames[variant],
+            iconSizeClassNames[size],
+            suffixIconClassName,
+          )}
+        ></i>
+      </div>
+    )}
+  </button>
+);
