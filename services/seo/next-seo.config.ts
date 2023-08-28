@@ -6,8 +6,8 @@ const APP_DEFAULT_SEO = {
     locale: 'fr_FR',
   },
   twitter: {
-    handle: '@flexper',
-    site: '@flexper',
+    handle: '@qlaffont',
+    site: '@qlaffont',
     cardType: 'summary_large_image',
   },
 };
