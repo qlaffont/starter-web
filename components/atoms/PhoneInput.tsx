@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import 'react-international-phone/style.css';
 
-import clsx from 'clsx';
+import cx from 'classix';
 import { Controller } from 'react-hook-form';
 import { PhoneInput as PhoneInputCmp } from 'react-international-phone';
 
@@ -42,7 +42,7 @@ export const PhoneInput = ({
         return (
           <div className={className}>
             {label && (
-              <p className={clsx('block pb-1 font-bold', error ? '!text-salmon' : 'text-dark-blue')}>
+              <p className={cx('block pb-1 font-bold', error ? '!text-salmon' : 'text-dark-blue')}>
                 {required ? `${label} *` : label}
               </p>
             )}
@@ -61,7 +61,7 @@ export const PhoneInput = ({
 
             {((isTouched && !!error) || helperText) && (
               <p
-                className={clsx(
+                className={cx(
                   'mt-1 text-sm',
                   error
                     ? '!border-salmon bg-salmon !text-salmon bg-opacity-30 px-2 py-2'

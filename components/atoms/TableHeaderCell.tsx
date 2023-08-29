@@ -1,6 +1,6 @@
 import { Popover } from '@headlessui/react';
 import { Float } from '@headlessui-float/react';
-import clsx from 'clsx';
+import cx from 'classix';
 import React, { Dispatch, useCallback, useEffect, useMemo, useState } from 'react';
 import { useDebounce } from 'usehooks-ts';
 
@@ -87,25 +87,25 @@ export const FilterModal = ({
       {onUnselectAll && filters?.length > 0 && (
         <div
           onClick={() => onUnselectAll()}
-          className={clsx(onUnselectAll ? 'cursor-pointer' : '', 'hover:opacity-50')}
+          className={cx(onUnselectAll ? 'cursor-pointer' : '', 'hover:opacity-50')}
         >
           <p className="text-dark-2 underline">{t('components.atoms.table.unselectAll')}</p>
         </div>
       )}
 
       {onSelectAll && filters?.length === 0 && (
-        <div onClick={() => onSelectAll()} className={clsx(onSelectAll ? 'cursor-pointer' : '', 'hover:opacity-50')}>
+        <div onClick={() => onSelectAll()} className={cx(onSelectAll ? 'cursor-pointer' : '', 'hover:opacity-50')}>
           <p className="text-dark-2 underline">{t('components.atoms.table.selectAll')}</p>
         </div>
       )}
 
       <div
-        className={clsx('border-dark-4 h-52 w-full overflow-auto rounded-b-lg border', isLoading ? 'bg-dark-5' : '')}
+        className={cx('border-dark-4 h-52 w-full overflow-auto rounded-b-lg border', isLoading ? 'bg-dark-5' : '')}
       >
         {displayedItems.map(({ value, data }) => (
           <div
             key={value}
-            className={clsx(
+            className={cx(
               'hover:bg-dark-4 flex items-center gap-2 whitespace-nowrap p-2 px-4',
               !isLoading ? 'cursor-pointer' : '!cursor-default',
             )}
@@ -208,7 +208,7 @@ export const TableHeaderCell = ({
           <div className="flex flex-col">
             <div>
               <i
-                className={clsx(
+                className={cx(
                   'icon icon-arrow-up -mb-1 block h-4 w-4',
                   sort === Sorting.ASC ? 'bg-primary' : 'bg-dark-3',
                 )}
@@ -216,7 +216,7 @@ export const TableHeaderCell = ({
             </div>
             <div>
               <i
-                className={clsx(
+                className={cx(
                   'icon icon-arrow-down -mt-1 -mb-1 block h-4 w-4',
                   sort === Sorting.DESC ? 'bg-primary' : 'bg-dark-3',
                 )}
@@ -242,7 +242,7 @@ export const TableHeaderCell = ({
                 <Popover.Button>
                   <div className="flex cursor-pointer items-center gap-2 pt-2">
                     <i
-                      className={clsx(
+                      className={cx(
                         'icon icon-filter-3-fill block h-5 w-5',
                         filters?.length > 0 ? 'bg-primary' : 'bg-dark-3',
                       )}

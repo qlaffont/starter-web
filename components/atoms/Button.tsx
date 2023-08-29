@@ -59,7 +59,7 @@ export const Button = ({
   suffixIcon,
   onClickSuffix,
   ...props
-}) => (
+}: Props) => (
   <button
     className={cx(
       'flex items-center justify-center gap-2',
@@ -77,14 +77,14 @@ export const Button = ({
     {isLoading && (
       <div>
         <i
-          className={clsx('icon icon-refresh animate block', iconSizeClassNames[size], iconVariantClassNames[variant])}
+          className={cx('icon icon-refresh animate block', iconSizeClassNames[size], iconVariantClassNames[variant])}
         ></i>
       </div>
     )}
     {prefixIcon && (
       <div onClick={onClickPrefix}>
         <i
-          className={clsx(
+          className={cx(
             'block',
             `${prefixIcon}`,
             iconVariantClassNames[variant],

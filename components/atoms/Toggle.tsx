@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import cx from 'classix';
 
 type Props = {
   value: boolean;
@@ -22,14 +22,14 @@ export const Toggle = ({ value, id, onClick }: Props) => (
         />
 
         <span
-          className={clsx(
+          className={cx(
             `${checked} absolute inset-0 !cursor-pointer rounded-full ${uncheckedColor} transition`,
             value !== true ? 'opacity-60' : '',
           )}
         />
 
         <span
-          className={clsx(
+          className={cx(
             `absolute inset-0 m-[2px] h-[11px] w-[11px] !cursor-pointer rounded-full bg-white transition peer-checked:translate-x-[0.8rem]`,
             value !== true ? 'opacity-60' : '',
           )}

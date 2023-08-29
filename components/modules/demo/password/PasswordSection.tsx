@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import cx from 'classix';
 import { useBoolean } from 'usehooks-ts';
 
 import { useI18n } from '../../../../i18n/useI18n';
@@ -19,7 +19,7 @@ export const PasswordSection = () => {
   const { value: isConfirmPasswordVisible, toggle: togleConfirmPasswordVisible } = useBoolean(false);
 
   return (
-    <div className={clsx('space-y-2', !isValid && 'bg-error bg-opacity-30')}>
+    <div className={cx('space-y-2', !isValid && 'bg-error bg-opacity-30')}>
       <PasswordInput
         name="oldPassword"
         isVisible={isOldPasswordVisible}

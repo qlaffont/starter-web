@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import clsx from 'clsx';
+import cx from 'classix';
 import { components } from 'react-select';
 
 export const SelectPlaceholder = (props) => {
@@ -9,7 +9,7 @@ export const SelectPlaceholder = (props) => {
         <div className="hidden"></div>
       ) : (
         <p
-          className={clsx(
+          className={cx(
             props?.selectProps?.placeholder?.length === 0 ? '!hidden' : '',
             props?.selectProps?.placeholderClassName || '',
           )}

@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import cx from 'classix';
 import React, { useEffect, useRef } from 'react';
 
 interface CheckboxProps {
@@ -37,7 +37,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
           if (onChange) onChange(event.target.checked);
         }}
         readOnly={onChange == undefined}
-        className={clsx(
+        className={cx(
           rounded ? 'rounded-xl' : 'rounded-md',
           'h-6 w-6 border-black outline-none',
           'text-green cursor-pointer focus:ring-0 focus:ring-offset-0',

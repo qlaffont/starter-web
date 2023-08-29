@@ -1,5 +1,5 @@
 import { flexRender } from '@tanstack/react-table';
-import clsx from 'clsx';
+import cx from 'classix';
 import { isEmpty } from 'lodash';
 import React, { useEffect } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
@@ -132,9 +132,9 @@ function Table({ update, hasMore, tableProps, isLoading, onSubRowCallback, empty
                       first = true;
                     }
                     return (
-                      <td key={cell.id} className={clsx('p-0')}>
+                      <td key={cell.id} className={cx('p-0')}>
                         <div
-                          className={clsx(
+                          className={cx(
                             ' mb-1 flex h-[46px] items-center bg-white p-3',
                             isFirst ? 'rounded-l-md' : '',
                             index === row.getVisibleCells()?.length - 1 ? 'rounded-r-md' : '',

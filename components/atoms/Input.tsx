@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import cx from 'classix';
-import React, { ComponentPropsWithoutRef, PropsWithoutRef, RefAttributes } from 'react';
+import React, { ComponentPropsWithoutRef, HTMLInputTypeAttribute, PropsWithoutRef, RefAttributes } from 'react';
 import { useMemo } from 'react';
 import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
 import { useSsr } from 'usehooks-ts';
@@ -202,10 +202,10 @@ export const PasswordInput = ({ isVisible, onVisibilityClick, hideAutofill, ...p
     <Input
       type={isVisible ? 'text' : hideAutofill && isChrome ? 'text' : 'password'}
       autoComplete={hideAutofill ? 'off' : props.autoComplete}
-      suffixIcon={clsx('icon', isVisible ? 'icon-eye' : 'icon-eye-off')}
-      suffixIconClassName={clsx(!isVisible && 'mt-4', 'cursor-pointer')}
+      suffixIcon={cx('icon', isVisible ? 'icon-eye' : 'icon-eye-off')}
+      suffixIconClassName={cx(!isVisible && 'mt-4', 'cursor-pointer')}
       onSuffixClick={onVisibilityClick}
-      inputClassName={clsx(props.inputClassName || '', hideAutofill && !isVisible && isChrome ? 'text-security' : '')}
+      inputClassName={cx(props.inputClassName || '', hideAutofill && !isVisible && isChrome ? 'text-security' : '')}
       {...props}
     />
   );

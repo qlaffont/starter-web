@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import cx from 'classix';
 import React from 'react';
 
 export type SpinnerProps = {
@@ -8,5 +8,5 @@ export type SpinnerProps = {
 };
 
 export const Spinner: React.FC<SpinnerProps> = ({ width, height, className }) => (
-  <i className={clsx(`icon icon-refresh animate bg-dark-blue block w-${width} h-${height}`, className)} />
+  <i className={cx(`icon icon-refresh animate bg-dark-blue block w-${width} h-${height}`, className)} />
 );

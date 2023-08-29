@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import cx from 'classix';
 import { useCallback } from 'react';
 
 import { useI18n } from '../../../../i18n/useI18n';
@@ -34,7 +34,7 @@ export const PhoneSection = () => {
   }, [doesntHaveWhatsapp, setValue]);
 
   return (
-    <div className={clsx('space-y-2', !isValid && 'bg-error bg-opacity-30')}>
+    <div className={cx('space-y-2', !isValid && 'bg-error bg-opacity-30')}>
       <div className="flex items-center justify-start gap-2">
         <Toggle value={doesntHaveWhatsapp} onClick={onDoesntHaveWhatsAppCLick} id="toggleSecondPhone" />
         <p>{t('pages.demo.dontHaveSecondPhone')}</p>
