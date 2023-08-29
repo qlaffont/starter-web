@@ -28,7 +28,7 @@ const Modal: FC<{
           <Dialog.Overlay />
           <div
             className="fixed inset-0 bg-zinc-900 bg-opacity-50 backdrop-blur backdrop-filter transition-opacity"
-            onClick={() => onClose()}
+            onClick={onClose}
           />
 
           {/* This element is to trick the browser into centering the modal contents. */}
@@ -58,7 +58,7 @@ const Modal: FC<{
                     ></i>
                   </span>
                   <div>
-                    <Dialog.Title className="line-clamp-1 text-2xl font-bold text-white">{title}</Dialog.Title>
+                    <Dialog.Title className="text-2xl font-bold text-white line-clamp-1">{title}</Dialog.Title>
                   </div>
                   <div>
                     <button

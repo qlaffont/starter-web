@@ -1,6 +1,6 @@
-import { ZodLocaleMap } from 'zod-rosetty';
+import { ZodMessages } from './zod';
 
-export const ZodEn: ZodLocaleMap = {
+export const ZodEn: ZodMessages = {
   zod: {
     errors: {
       invalid_type: 'Expected {{expected}}, received {{received}}',
@@ -111,6 +111,10 @@ export const ZodEn: ZodLocaleMap = {
       never: 'never',
       map: 'map',
       set: 'set',
+    },
+    password: {
+      lenght: 'Your password should be between 8 and 20 characters',
+      mismatch: 'Passwords are not identicals',
     },
   },
 };

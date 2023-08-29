@@ -6,14 +6,23 @@
   mask-size: 100% !important;
   mask-repeat: no-repeat !important;
 
-  $icons: 'en', 'fr';
+  &.icon-refresh {
+    -webkit-mask: url('/icons/refresh.svg');
+
+    &.animate {
+      animation: spin 1s linear infinite;
+    }
+  }
+
+  $icons: 'en', 'fr', 'refresh', 'eye', 'eye-off';
 
   @each $icon in $icons {
     &.icon-#{$icon} {
       mask: url('/icons/#{$icon}.svg');
     }
     &.bg-#{$icon} {
-      background: url('/icons/#{$icon}.svg') no-repeat;
+      background-repeat: no-repeat;
+      background-image: url('/icons/#{$icon}.svg'), url('/icons/#{$icon}.png');
       background-size: 100%;
     }
   }

@@ -29,11 +29,28 @@ const lng: typeof enDict = {
         noOptions: 'Aucun élement',
         loading: 'Chargement',
       },
+      table: {
+        filterBy: 'Filtrer par',
+        search: 'Rechercher',
+        unselectAll: 'Désélectionner tout',
+        selectAll: 'Sélectionner tout',
+      },
     },
   },
   pages: {
     home: {
       hello: 'Bienvenue tout le monde !',
+    },
+    demo: {
+      isButtonLoading: 'isButtonLoading',
+      phone1: 'phone1',
+      phone2: 'phone2',
+      dontHaveSecondPhone: "don't have second phone",
+      fillSame: 'fill same',
+      oldPassword: 'old password',
+      newPassword: 'new password',
+      confirmPassword: 'confirm password',
+      invalidOldPassword: 'invalid old password',
     },
   },
   ...ZodFr,

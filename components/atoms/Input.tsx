@@ -1,11 +1,14 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import cx from 'classix';
-import React, { ComponentPropsWithoutRef, PropsWithoutRef, RefAttributes } from 'react';
+import React, { ComponentPropsWithoutRef, HTMLInputTypeAttribute, PropsWithoutRef, RefAttributes } from 'react';
 import { useMemo } from 'react';
-import { UseFormRegisterReturn } from 'react-hook-form';
+import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
+import { useSsr } from 'usehooks-ts';
+
+import { useI18n } from '../../i18n/useI18n';
+import { translateErrorMessage } from '../../i18n/zod';
 
 const variantClassNames = {
-  transparent: 'w-full',
   normal: 'border border-dark-10 focus-within:border-dark-30 rounded-md',
 };
 
@@ -15,10 +18,8 @@ const sizeClassNames = {
 };
 
 const variantInputClassNames: Record<keyof typeof variantClassNames, string> = {
-  transparent:
-    'peer h-10 w-full text-black dark:text-white placeholder-transparent focus:placeholder-dark-10 focus:outline-none bg-transparent !border-0 outline-none !shadow-none !ring-transparent',
   normal:
-    'peer h-10 w-full text-black dark:text-white focus:outline-none bg-transparent !border-0 outline-none !shadow-none !ring-transparent',
+    'peer h-10 w-full text-white dark:text-black focus:outline-none bg-transparent !border-0 outline-none !shadow-none !ring-transparent',
 };
 
 const sizeInputClassNames: Record<keyof typeof sizeClassNames, string> = {
@@ -27,8 +28,16 @@ const sizeInputClassNames: Record<keyof typeof sizeClassNames, string> = {
 };
 
 const variantLabelClassNames: Record<keyof typeof variantClassNames, string> = {
-  transparent: '',
   normal: '',
+};
+
+const iconVariantClassNames: Record<keyof typeof variantClassNames, string> = {
+  normal: 'bg-black',
+};
+
+const iconSizeClassNames: Record<keyof typeof sizeClassNames, string> = {
+  medium: 'h-4 w-4',
+  small: 'h-3 w-3',
 };
 
 export type InputSize = keyof typeof sizeClassNames;
@@ -41,8 +50,8 @@ export interface InputProps extends ComponentPropsWithoutRef<'input'> {
   variant?: keyof typeof variantClassNames;
   size?: InputSize;
   className?: string;
-  type?: string;
-  error?;
+  type?: HTMLInputTypeAttribute;
+  error?: FieldError;
   register?: UseFormRegisterReturn;
   prefixIcon?: string;
   suffixIcon?: string;
@@ -52,7 +61,8 @@ export interface InputProps extends ComponentPropsWithoutRef<'input'> {
   inputClassName?: string;
   helperText?: string;
   disabled?: boolean;
-  onClick?: React.MouseEventHandler<any>;
+  onPrefixClick?: React.MouseEventHandler<any>;
+  onSuffixClick?: React.MouseEventHandler<any>;
   inputRef?: React.LegacyRef<HTMLInputElement>;
 }
 
@@ -74,14 +84,20 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
   error,
   register = {},
   inputRef,
-  onClick,
+  onPrefixClick,
+  onSuffixClick,
   helperText,
   required,
   ...props
 }) => {
+  const { t } = useI18n();
   const isError = useMemo(() => {
     return !!error;
   }, [error]);
+
+  const translatedError = error?.message ? translateErrorMessage({ message: error?.message }, t) : '';
+
+  if (!!error && !translatedError) console.warn(`No translation was found for the key '${error.message}'`);
 
   return (
     <div className={cx('relative block max-w-xl', className)}>
@@ -116,28 +132,26 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
                 'icon bg-dark-100 block h-5 w-5',
                 `icon-${prefixIcon}`,
                 prefixIconClassName,
-                disabled ? 'cursor-not-allowed' : 'cursor-pointer',
+                onPrefixClick ? (disabled ? 'cursor-not-allowed' : 'cursor-pointer') : '',
               )}
-              onClick={onClick}
+              onClick={onPrefixClick}
             />
           </div>
         )}
-        <div className="flex-grow">
+        <div className="grow">
           <input
             id={name}
-            name={name}
             type={type}
             className={cx(
               'px-0',
               variantInputClassNames[variant],
               sizeInputClassNames[size],
-              'placeholder-white placeholder-opacity-60',
               disabled ? 'cursor-not-allowed' : '',
+              props.contentEditable === false && 'cursor-default caret-transparent',
               inputClassName,
             )}
             disabled={disabled}
             placeholder={placeholder || ''}
-            ref={inputRef}
             {...register}
             {...props}
           />
@@ -149,9 +163,9 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
                 'icon block h-5 w-5 bg-white',
                 `icon-${suffixIcon}`,
                 suffixIconClassName,
-                disabled ? 'cursor-not-allowed' : 'cursor-pointer',
+                onSuffixClick ? (disabled ? 'cursor-not-allowed' : 'cursor-pointer') : '',
               )}
-              onClick={onClick}
+              onClick={onSuffixClick}
             />
           </div>
         )}
@@ -159,9 +173,38 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
       {(!!error || helperText) && (
         <p
           className={cx('mt-1 text-sm', isError ? '!border-error !text-error' : 'text-white text-opacity-80')}
-          dangerouslySetInnerHTML={{ __html: error || helperText }}
+          dangerouslySetInnerHTML={{ __html: error! || helperText }}
         ></p>
       )}
     </div>
+  );
+};
+
+type PasswordInputProps = InputProps & {
+  isVisible: boolean;
+  onVisibilityClick: () => void;
+  hideAutofill?: boolean;
+};
+
+export const PasswordInput = ({ isVisible, onVisibilityClick, hideAutofill, ...props }: PasswordInputProps) => {
+  const { isBrowser } = useSsr();
+  const isChrome = useMemo(() => {
+    if (!isBrowser) {
+      return false;
+    }
+
+    return /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+  }, [isBrowser]);
+
+  return (
+    <Input
+      type={isVisible ? 'text' : hideAutofill && isChrome ? 'text' : 'password'}
+      autoComplete={hideAutofill ? 'off' : props.autoComplete}
+      suffixIcon={cx('icon', isVisible ? 'icon-eye' : 'icon-eye-off')}
+      suffixIconClassName={cx(!isVisible && 'mt-4', 'cursor-pointer')}
+      onSuffixClick={onVisibilityClick}
+      inputClassName={cx(props.inputClassName || '', hideAutofill && !isVisible && isChrome ? 'text-security' : '')}
+      {...props}
+    />
   );
 };

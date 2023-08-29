@@ -22,7 +22,7 @@ import { SelectSingleValue } from './SelectSingleValue';
 import { SelectValueContainer } from './SelectValueContainer';
 
 export interface SelectOption {
-  label: string;
+  label: unknown;
   value: unknown;
 }
 
@@ -32,15 +32,21 @@ type Props = {
 
   isSearchable?: boolean;
   isClearable?: boolean;
+  isLoading?: boolean;
 
   required?: boolean;
   disabled?: boolean;
   placeholder?: string;
 
   options?: SelectOption[];
-  loadOptions?: (filter: string) => SelectOption[];
+  loadOptions?: (filter: string) => SelectOption[] | Promise<SelectOption[]>;
+  onInputChange?: (filter: string) => void;
+
+  formatCreateLabel?: (field: string) => string;
 
   className?: string;
+  selectClassName?: string;
+  placeholderClassName?: string;
   size?: InputSize;
 
   label?: string;
@@ -58,6 +64,8 @@ type Props = {
   OptionComponent?;
   instanceId?;
   id?;
+  hideMenuIfNoOptions?: boolean;
+  inputClassName?: string;
 };
 
 export const SelectComponent: React.FC<Props> = ({
@@ -65,6 +73,8 @@ export const SelectComponent: React.FC<Props> = ({
   creatable = false,
   className = '',
   placeholder = '',
+  placeholderClassName = '',
+  selectClassName = '',
   options = [],
   label,
   size = 'medium',
@@ -127,14 +137,13 @@ export const SelectComponent: React.FC<Props> = ({
           noOptionsMessage={() => (
             <span className="text-dark-40 text-sm">{t('components.atoms.select.noOptions')}</span>
           )}
-          loadingMesszage={() => (
-            <span className="text-dark-40 text-sm">{t('components.atoms.select.loading')}...</span>
-          )}
+          loadingMessage={() => <span className="text-dark-40 text-sm">{t('components.atoms.select.loading')}...</span>}
           size={size}
           error={error}
           helperText={helperText}
           isDisabled={disabled}
           inputRef={selectRef}
+          placeholderClassName={placeholderClassName}
           {...props}
         />
       </div>

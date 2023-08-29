@@ -2,6 +2,7 @@ import cx from 'classix';
 import React from 'react';
 
 const sizeClassNames = {
+  content: '',
   medium: 'py-2 px-5 text-base',
   small: 'py-1 px-3 text-sm',
 };
@@ -19,14 +20,16 @@ const iconVariantClassNames: Record<keyof typeof variantClassNames, string> = {
 };
 
 const iconSizeClassNames: Record<keyof typeof sizeClassNames, string> = {
+  content: 'h-4 w-4',
   medium: 'h-4 w-4',
   small: 'h-3 w-3',
 };
 
-export const Button: React.FC<{
+interface Props {
   size?: keyof typeof sizeClassNames;
   variant?: keyof typeof variantClassNames;
   type?: 'button' | 'submit';
+  as?: 'button' | 'div';
   className?: string;
   disabled?: boolean;
   isLoading?: boolean;
@@ -38,13 +41,16 @@ export const Button: React.FC<{
   onClick?: React.MouseEventHandler<any>;
   onClickPrefix?: React.MouseEventHandler<any>;
   onClickSuffix?: React.MouseEventHandler<any>;
-}> = ({
+}
+
+export const Button = ({
   variant = 'primary',
   size = 'medium',
   className = '',
   prefixIconClassName = '',
   suffixIconClassName = '',
   type = 'button',
+  as = 'button',
   disabled = false,
   isLoading = false,
   children,
@@ -53,7 +59,7 @@ export const Button: React.FC<{
   suffixIcon,
   onClickSuffix,
   ...props
-}) => (
+}: Props) => (
   <button
     className={cx(
       'flex items-center justify-center gap-2',
@@ -89,7 +95,7 @@ export const Button: React.FC<{
       </div>
     )}
 
-    {children && <p>{children}</p>}
+      {children && <p>{children}</p>}
 
     {suffixIcon && (
       <div onClick={onClickSuffix}>

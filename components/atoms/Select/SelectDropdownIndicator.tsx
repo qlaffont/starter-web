@@ -6,7 +6,7 @@ export const SelectDropdownIndicator = (props) => (
     {props?.selectProps?.hideIndicator ? (
       <div className="hidden"></div>
     ) : (
-      <i className="icon icon-arrow-down block h-4 w-4 cursor-pointer bg-black dark:bg-white"></i>
+      <i className="icon icon-chevron-down block h-4 w-4 cursor-pointer bg-black dark:bg-white"></i>
     )}
   </components.DropdownIndicator>
 );
