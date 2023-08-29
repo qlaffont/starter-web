@@ -1,5 +1,14 @@
 import * as z from 'zod';
-import { zodRosettyMap } from 'zod-rosetty';
+import { ZodLocaleMap, zodRosettyMap } from 'zod-rosetty';
+
+export type ZodMessages = ZodLocaleMap & {
+  zod: {
+    password: {
+      lenght: string;
+      mismatch: string;
+    };
+  };
+};
 
 z.setErrorMap(zodRosettyMap);
 
