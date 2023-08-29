@@ -1,12 +1,11 @@
-import { yupResolver } from '@hookform/resolvers/yup';
+import { zodResolver } from '@hookform/resolvers/zod';
 import { useCallback, useEffect, useMemo } from 'react';
 import { useForm, UseFormReturn, useWatch } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { useBoolean, useDebounce } from 'usehooks-ts';
-import { ObjectSchema } from 'yup';
+import { Schema, z } from 'zod';
 
 import { useI18n } from '../../../../i18n/useI18n';
-import { yupI18n } from '../../../../i18n/validation';
 import { usePasswordValidation } from './usePasswordValidation';
 
 type PasswordForm = {
@@ -27,14 +26,18 @@ export const usePasswordSection = (): HookReturn => {
   const { passwordConfirmValidation, passwordValidation } = usePasswordValidation();
   const { value: isOldPasswordInvalid, setValue: setIsOldPasswordInvalid } = useBoolean(false);
 
-  const passwordSchema: ObjectSchema<PasswordForm> = yupI18n.object().shape({
-    oldPassword: passwordValidation,
-    newPassword: passwordConfirmValidation('newPasswordConfirm', true).required(),
-    newPasswordConfirm: passwordConfirmValidation('newPassword').required(),
-  });
+  const passwordSchema: Schema<PasswordForm> = passwordConfirmValidation(
+    z.object({
+      oldPassword: passwordValidation,
+      newPassword: passwordValidation,
+      newPasswordConfirm: passwordValidation,
+    }),
+    'newPassword',
+    'newPasswordConfirm',
+  );
 
   const form = useForm<PasswordForm>({
-    resolver: yupResolver(passwordSchema),
+    resolver: zodResolver(passwordSchema),
     mode: 'onChange',
   });
   const password = form.watch('newPassword');
@@ -77,7 +80,7 @@ export const usePasswordSection = (): HookReturn => {
       }
     }
 
-    toast.success(t('components.atoms.alert.changesSaved'));
+    toast.success(t('components.atoms.alert.changesSaved') as string);
   }, [form, isValid, t, setIsOldPasswordInvalid]);
 
   return {

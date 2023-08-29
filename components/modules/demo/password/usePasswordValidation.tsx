@@ -1,19 +1,26 @@
 import { useCallback } from 'react';
-
-import { yupI18n } from '../../../../i18n/validation';
+import { Schema, z } from 'zod';
 
 export const usePasswordValidation = () => {
-  const passwordValidation = yupI18n.string().min(8, 'yup.password.length').max(20, 'yup.password.length');
+  const passwordValidation = z.string().min(8, 'zod.password.length').max(20, 'zod.password.length');
 
   const passwordConfirmValidation = useCallback(
-    (schemaKeyToMatch: string, ignoreWhereSchemaKeyValueIsEmpty = false) =>
-      passwordValidation.test('checkIfValid', 'yup.password.notIdentical', (value, { parent }) => {
-        if (value?.length > 0 && parent[schemaKeyToMatch]?.length > 0) {
-          return parent[schemaKeyToMatch] === value;
+    <T extends object>(
+      zodSchemaObject: Schema<T>,
+      basePasswordKey: keyof z.infer<typeof zodSchemaObject>,
+      confirmPasswordKey: keyof z.infer<typeof zodSchemaObject>,
+    ) => {
+      zodSchemaObject.superRefine((data, ctx) => {
+        if (data[basePasswordKey] !== data[confirmPasswordKey]) {
+          ctx.addIssue({
+            code: 'custom',
+            message: 'zod.password.mismatch',
+          });
         }
+      });
 
-        return ignoreWhereSchemaKeyValueIsEmpty;
-      }),
+      return zodSchemaObject;
+    },
     [passwordValidation],
   );
 
