@@ -6,7 +6,7 @@ import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
 import { useSsr } from 'usehooks-ts';
 
 import { useI18n } from '../../i18n/useI18n';
-import { translateErrorMessage } from '../../i18n/validation';
+import { translateErrorMessage } from '../../i18n/zod';
 
 const variantClassNames = {
   normal: 'border border-dark-10 focus-within:border-dark-30 rounded-md',
@@ -95,7 +95,7 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
     return !!error;
   }, [error]);
 
-  const translatedError = translateErrorMessage({ message: error?.message }, t);
+  const translatedError = error?.message ? translateErrorMessage({ message: error?.message }, t) : '';
 
   if (!!error && !translatedError) console.warn(`No translation was found for the key '${error.message}'`);
 
@@ -141,7 +141,6 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
         <div className="grow">
           <input
             id={name}
-            name={name}
             type={type}
             className={cx(
               'px-0',
@@ -153,7 +152,6 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
             )}
             disabled={disabled}
             placeholder={placeholder || ''}
-            ref={inputRef}
             {...register}
             {...props}
           />
@@ -175,7 +173,7 @@ export const Input: React.FC<PropsWithoutRef<InputProps> & RefAttributes<HTMLInp
       {(!!error || helperText) && (
         <p
           className={cx('mt-1 text-sm', isError ? '!border-error !text-error' : 'text-white text-opacity-80')}
-          dangerouslySetInnerHTML={{ __html: error || helperText }}
+          dangerouslySetInnerHTML={{ __html: error! || helperText }}
         ></p>
       )}
     </div>

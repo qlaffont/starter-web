@@ -3,7 +3,8 @@ import { useCallback, useEffect, useMemo } from 'react';
 import { useForm, UseFormReturn, useWatch } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { useBoolean, useDebounce } from 'usehooks-ts';
-import { Schema, z } from 'zod';
+import { Schema } from 'zod';
+import z from '../../../../i18n/zod';
 
 import { useI18n } from '../../../../i18n/useI18n';
 import { usePasswordValidation } from './usePasswordValidation';

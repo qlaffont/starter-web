@@ -1,5 +1,6 @@
 import { useCallback } from 'react';
-import { Schema, z } from 'zod';
+import { Schema } from 'zod';
+import z from '../../../../i18n/zod';
 
 export const usePasswordValidation = () => {
   const passwordValidation = z.string().min(8, 'zod.password.length').max(20, 'zod.password.length');
@@ -21,7 +22,7 @@ export const usePasswordValidation = () => {
 
       return zodSchemaObject;
     },
-    [passwordValidation],
+    [],
   );
 
   return {
