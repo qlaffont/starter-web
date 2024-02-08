@@ -60,8 +60,8 @@ dependencies:
     specifier: 2.0.12
     version: 2.0.12
   socket.io-client:
-    specifier: 4.7.2
-    version: 4.7.2
+    specifier: 4.7.4
+    version: 4.7.4
   tailwindcss:
     specifier: 3.3.3
     version: 3.3.3(ts-node@10.9.2)
@@ -6268,8 +6268,8 @@ packages:
       tslib: 2.5.0
     dev: true
 
-  /socket.io-client@4.7.2:
-    resolution: {integrity: sha512-vtA0uD4ibrYD793SOIAwlo8cj6haOeMHrGvwPxJsxH7CeIksqJ+3Zc06RvWTIFgiSqx4A3sOnTXpfAEE2Zyz6w==}
+  /socket.io-client@4.7.4:
+    resolution: {integrity: sha512-wh+OkeF0rAVCrABWQBaEjLfb7DVPotMbu0cgWgyR0v6eA4EoVnAwcIeIbcdTE3GT/H3kbdLl7OoH2+asoDRIIg==}
     engines: {node: '>=10.0.0'}
     dependencies:
       '@socket.io/component-emitter': 3.1.0
