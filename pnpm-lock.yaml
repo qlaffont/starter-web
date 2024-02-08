@@ -9,8 +9,8 @@ dependencies:
     specifier: 1.7.18
     version: 1.7.18(react-dom@18.2.0)(react@18.2.0)
   '@hookform/resolvers':
-    specifier: 3.3.0
-    version: 3.3.0(react-hook-form@7.45.4)
+    specifier: 3.3.4
+    version: 3.3.4(react-hook-form@7.45.4)
   '@t3-oss/env-nextjs':
     specifier: ^0.6.0
     version: 0.6.0(typescript@5.2.2)(zod@3.21.4)
@@ -1862,8 +1862,8 @@ packages:
       - '@types/react'
     dev: true
 
-  /@hookform/resolvers@3.3.0(react-hook-form@7.45.4):
-    resolution: {integrity: sha512-tgK3nWlfFLlqhqpXZmFMP3RN5E7mlbGfnM2h2ILVsW1TNGuFSod0ePW0grlIY2GAbL4pJdtmOT4HQSZsTwOiKg==}
+  /@hookform/resolvers@3.3.4(react-hook-form@7.45.4):
+    resolution: {integrity: sha512-o5cgpGOuJYrd+iMKvkttOclgwRW86EsWJZZRC23prf0uU2i48Htq4PuT73AVb9ionFyZrwYEITuOFGF+BydEtQ==}
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
