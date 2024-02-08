@@ -27,7 +27,7 @@
     "dayjs": "^1.11.9",
     "graphql": "16.8.1",
     "next": "13.4.19",
-    "next-protected-auth": "2.0.205",
+    "next-protected-auth": "2.0.215",
     "next-seo": "6.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
