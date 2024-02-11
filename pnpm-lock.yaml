@@ -66,8 +66,8 @@ dependencies:
     specifier: 3.4.1
     version: 3.4.1(ts-node@10.9.2)
   usehooks-ts:
-    specifier: 2.9.1
-    version: 2.9.1(react-dom@18.2.0)(react@18.2.0)
+    specifier: 2.14.0
+    version: 2.14.0(react@18.2.0)
   zod:
     specifier: ^3.21.4
     version: 3.21.4
@@ -5243,6 +5243,10 @@ packages:
     resolution: {integrity: sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==}
     dev: true
 
+  /lodash.debounce@4.0.8:
+    resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
+    dev: false
+
   /lodash.isfunction@3.0.9:
     resolution: {integrity: sha512-AirXNj15uRIMMPihnkInB4i3NHeb4iBtNg9WRWuK2o31S+ePwwNmDPaTL3o7dTJ+VXNZim7rFs4rxN4YU1oUJw==}
     dev: true
@@ -5503,7 +5507,7 @@ packages:
     dependencies:
       next: 13.5.6(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)(sass@1.70.0)
       react-test-renderer: 18.2.0(react@18.2.0)
-      usehooks-ts: 2.9.1(react-dom@18.2.0)(react@18.2.0)
+      usehooks-ts: 2.14.0(react@18.2.0)
     transitivePeerDependencies:
       - '@babel/core'
       - '@opentelemetry/api'
@@ -7247,15 +7251,14 @@ packages:
       react: 18.2.0
     dev: false
 
-  /usehooks-ts@2.9.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-2FAuSIGHlY+apM9FVlj8/oNhd+1y+Uwv5QNkMQz1oSfdHk4PXo1qoCw9I5M7j0vpH8CSWFJwXbVPeYDjLCx9PA==}
-    engines: {node: '>=16.15.0', npm: '>=8'}
+  /usehooks-ts@2.14.0(react@18.2.0):
+    resolution: {integrity: sha512-jnhrjTRJoJS7cFxz63tRYc5mzTKf/h+Ii8P0PDHymT9qDe4ZA2/gzDRmDR4WGausg5X8wMIdghwi3BBCN9JKow==}
+    engines: {node: '>=16.15.0'}
     peerDependencies:
-      react: ^16.8.0  || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0  || ^17.0.0 || ^18.0.0
+      react: ^16.8.0  || ^17 || ^18
     dependencies:
+      lodash.debounce: 4.0.8
       react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /util-deprecate@1.0.2:
