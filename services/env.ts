@@ -11,6 +11,7 @@ export const env = createEnv({
       .string()
       .transform((s) => s !== 'false' && s !== '0')
       .optional(),
+    NEXT_PUBLIC_NODE_ENV: z.string().default('development'),
   },
   server: {
     NODE_ENV: z.string().default('development'),
@@ -24,6 +25,7 @@ export const env = createEnv({
     NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
     NEXT_PUBLIC_GQL_URL: process.env.NEXT_PUBLIC_GQL_URL,
     NEXT_PUBLIC_DEV: process.env.NEXT_PUBLIC_DEV,
+    NEXT_PUBLIC_NODE_ENV: process.env.NEXT_PUBLIC_NODE_ENV,
 
     NODE_ENV: process.env.NODE_ENV,
     LOG: process.env.LOG,
