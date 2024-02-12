@@ -87,8 +87,8 @@ export const SelectComponent: React.FC<Props> = ({
           ? ReactSelectAsyncCreatableCmp
           : ReactSelectAsyncCmp
         : creatable
-        ? ReactSelectCreatableCmp
-        : ReactSelectCmp,
+          ? ReactSelectCreatableCmp
+          : ReactSelectCmp,
     [async, creatable],
   );
 

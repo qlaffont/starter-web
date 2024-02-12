@@ -9,7 +9,6 @@ export const reactQueryClient = new QueryClient({
       refetchOnWindowFocus: false,
       refetchOnMount: false,
       retry: false,
-      suspense: false,
     },
   },
 });
