@@ -57,8 +57,8 @@ dependencies:
     specifier: 5.8.0
     version: 5.8.0(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)
   rosetty-react:
-    specifier: 2.0.12
-    version: 2.0.12
+    specifier: 3.0.19
+    version: 3.0.19
   socket.io-client:
     specifier: 4.7.4
     version: 4.7.4
@@ -3276,6 +3276,10 @@ packages:
     resolution: {integrity: sha512-8YnDaaf7N3k/q5HnTJVuzSyLETjoZjVmHc4AeKAzOvKHEFQKcn64OKBfzHYtE9zGjctNM7V9I0MfnUVLpi7M5g==}
     dev: true
 
+  /date-fns@3.3.1:
+    resolution: {integrity: sha512-y8e109LYGgoQDveiEBD3DYXKba1jWf5BA8YU1FL5Tvm0BTdEfy54WLCwnuYWZNnzzvALy/QQ4Hov+Q9RVRv+Zw==}
+    dev: false
+
   /dayjs@1.11.10:
     resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
     dev: false
@@ -6280,18 +6284,18 @@ packages:
       templite: 1.2.0
     dev: false
 
-  /rosetty-react@2.0.12:
-    resolution: {integrity: sha512-UkQ6X1KLZs5fi1lAlabHB7ww7LPaxXtFfdJwjF1XLa+AxoqCJCasiMM6nJnfD0Kb1f0aVfkcovNQqYiNvKmCoA==}
+  /rosetty-react@3.0.19:
+    resolution: {integrity: sha512-VUVyXQ1I9/1fUwpuECADG7FLYAY3hFkNDypqzTGm6Jd8F9pvjGglYCZIwYECuU1oa0ik4EjkRevs3AxUnPOXZQ==}
     engines: {node: '>=10'}
     dependencies:
-      rosetty: 2.1.0
+      rosetty: 3.0.14
     dev: false
 
-  /rosetty@2.1.0:
-    resolution: {integrity: sha512-0wCpIp0z37c1I3p83xB4y59cbSclQ5A1gr3ELUUqjfWLCumHEFLx+1X4sB6dBIvJ6okaHNlspTIjAr9cvCNqTg==}
+  /rosetty@3.0.14:
+    resolution: {integrity: sha512-Y/BtK3dSXgCv3OTBDTJzXQ2VPtkNuSYrelNeSEqqJopRjvY8x5lhs9RgdV5736S/NpARFOMCN5NKioX+G6hl/w==}
     engines: {node: '>=10'}
     dependencies:
-      dayjs: 1.11.10
+      date-fns: 3.3.1
       rosetta: 1.1.0
     dev: false
 
