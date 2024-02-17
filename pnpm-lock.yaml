@@ -57,8 +57,8 @@ dependencies:
     specifier: 5.8.0
     version: 5.8.0(@types/react@18.2.56)(react-dom@18.2.0)(react@18.2.0)
   rosetty-react:
-    specifier: 3.0.20
-    version: 3.0.20
+    specifier: 3.0.21
+    version: 3.0.21
   socket.io-client:
     specifier: 4.7.4
     version: 4.7.4
@@ -6285,8 +6285,8 @@ packages:
       templite: 1.2.0
     dev: false
 
-  /rosetty-react@3.0.20:
-    resolution: {integrity: sha512-cpgmIJPOqf+HkEXxk7wgiven0Z+OWhBWjoAV7lpj9XZWDjD5z5nMZ3q1iQjHOOf0SPDG6ZyfKfB1O3ntdTuenQ==}
+  /rosetty-react@3.0.21:
+    resolution: {integrity: sha512-qxHCANrhWs9xQlv4AqTvzlNmL01LqnIiMSd4d2xkRtXEcjYlSliqBPYrOZvaUZY2kucSORLQpYV+bI9n/Lqxxw==}
     engines: {node: '>=10'}
     dependencies:
       rosetty: 3.0.14
