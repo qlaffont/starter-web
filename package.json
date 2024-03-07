@@ -34,7 +34,7 @@
     "react-hook-form": "7.51.0",
     "react-hot-toast": "2.4.1",
     "react-select": "5.8.0",
-    "rosetty-react": "3.0.39",
+    "rosetty-react": "3.0.42",
     "socket.io-client": "4.7.4",
     "tailwindcss": "3.4.1",
     "usehooks-ts": "2.16.0",
