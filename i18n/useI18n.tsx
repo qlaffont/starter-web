@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Rosetty, useRosetty } from 'rosetty-react';
-import { useSsr } from 'usehooks-ts';
+import { useIsClient } from 'usehooks-ts';
 
 import frDict from '../i18n/fr';
 
@@ -18,7 +18,7 @@ export const getDefaultLanguage = () => {
 
 export const useI18nSEO = () => {
   const { actualLang, changeLang } = useI18n();
-  const { isBrowser } = useSsr();
+  const isBrowser = useIsClient();
 
   useEffect(() => {
     if (document) {
