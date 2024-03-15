@@ -73,7 +73,7 @@ dependencies:
     version: 3.22.4
   zod-rosetty:
     specifier: ^1.0.103
-    version: 1.0.131
+    version: 1.0.132
 
 devDependencies:
   '@babel/core':
@@ -7265,8 +7265,8 @@ packages:
     engines: {node: '>=12.20'}
     dev: true
 
-  /zod-rosetty@1.0.131:
-    resolution: {integrity: sha512-EW5dmR9LNOVFqBuDK8W6wfZulxz1+5xshD4juqOXi+PV0in6pSEPtqWC+lyWIq2yJNEpfspTHY9exMgTfnEEMA==}
+  /zod-rosetty@1.0.132:
+    resolution: {integrity: sha512-Q+Axp3NIKv/lHFLolvWAtOt/ehUgj/igWhHiLgRe0Qduj19FlDWmrMubEYT+f+2wmgyAJAZGdMOuvTktxbSEAw==}
     engines: {node: '>=10'}
     dependencies:
       zod: 3.22.4
