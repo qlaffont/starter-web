@@ -37,7 +37,7 @@
     "rosetty-react": "3.0.73",
     "socket.io-client": "4.7.5",
     "tailwindcss": "3.4.1",
-    "usehooks-ts": "3.0.1",
+    "usehooks-ts": "3.0.2",
     "zod": "^3.22.4",
     "zod-rosetty": "^1.0.103"
   },
