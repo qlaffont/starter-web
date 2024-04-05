@@ -25,7 +25,7 @@ dependencies:
     version: 5.29.0(@tanstack/react-query@5.29.0)(react@18.2.0)
   classix:
     specifier: ^2.1.36
-    version: 2.1.36
+    version: 2.1.37
   dayjs:
     specifier: ^1.11.10
     version: 1.11.10
@@ -3080,8 +3080,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
 
-  /classix@2.1.36:
-    resolution: {integrity: sha512-1glwI9Ho7s/Z5vqCNLj3eYU+17A9KHjLREcmzJUmZS+GnXBgS1/or5fzqhB5b59jsPxazONrajM5d9hgJgnnlA==}
+  /classix@2.1.37:
+    resolution: {integrity: sha512-mTlsDSW/AHxHNggs+dNpI2kYGyK0tawAupR0B6vQYU9i8WTAoaa6bFGKIwwiHfmfCZdrsrtlCULic7p/9ZPuVQ==}
     dev: false
 
   /clean-stack@2.2.0:
