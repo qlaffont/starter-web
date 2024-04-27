@@ -39,8 +39,8 @@ importers:
         specifier: 14.2.3
         version: 14.2.3(@babel/core@7.24.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.75.0)
       next-protected-auth:
-        specifier: 2.0.298
-        version: 2.0.298(@babel/core@7.24.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.75.0)
+        specifier: 2.0.300
+        version: 2.0.300(@babel/core@7.24.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.75.0)
       next-seo:
         specifier: 6.5.0
         version: 6.5.0(next@14.2.3(@babel/core@7.24.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.75.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2808,8 +2808,8 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  next-protected-auth@2.0.298:
-    resolution: {integrity: sha512-jkfIdjyWnS840VyE5Xv70NQ9ggOuSt1wrcudDLChl58eMk2y2hG48Evy54Oi9ZahnuLv92gR1+Ya3C1nI2Sryg==}
+  next-protected-auth@2.0.300:
+    resolution: {integrity: sha512-NYoUPyV9yTs6iZOPlk4+yxU6rRomk4svZP8iZgx8QYNL8EJM06ArVu440BCXvaMoVJw1A0EDjbEJFwnezK6Rmw==}
     engines: {node: '>=10'}
 
   next-seo@6.5.0:
@@ -3361,9 +3361,6 @@ packages:
     resolution: {integrity: sha512-ShMYi3WkrDWxExyxSZPst4/okE9ts46xZmJDSawJQrnte7M1V9fScVB+uNXOVKRBt0PggHOwoZcn8mYX4trnBw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
-
-  scheduler@0.23.1:
-    resolution: {integrity: sha512-5GKS5JGfiah1O38Vfa9srZE4s3wdHbwjlCrvIookrg2FO9aIwKLOJXuJQFlEfNcVSOXuaL2hzDeY20uVXcUtrw==}
 
   scheduler@0.23.2:
     resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
@@ -7227,7 +7224,7 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next-protected-auth@2.0.298(@babel/core@7.24.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.75.0):
+  next-protected-auth@2.0.300(@babel/core@7.24.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.75.0):
     dependencies:
       next: 14.2.3(@babel/core@7.24.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.75.0)
       react-test-renderer: 18.2.0(react@18.3.1)
@@ -7609,7 +7606,7 @@ snapshots:
       react: 18.3.1
       react-is: 18.2.0
       react-shallow-renderer: 16.15.0(react@18.3.1)
-      scheduler: 0.23.1
+      scheduler: 0.23.2
 
   react-transition-group@4.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
@@ -7763,10 +7760,6 @@ snapshots:
       chokidar: 3.6.0
       immutable: 4.3.5
       source-map-js: 1.2.0
-
-  scheduler@0.23.1:
-    dependencies:
-      loose-envify: 1.4.0
 
   scheduler@0.23.2:
     dependencies:
