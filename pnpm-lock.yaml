@@ -31,7 +31,7 @@ importers:
         version: 2.1.37
       dayjs:
         specifier: ^1.11.10
-        version: 1.11.10
+        version: 1.11.11
       graphql:
         specifier: 16.8.1
         version: 16.8.1
@@ -1724,8 +1724,8 @@ packages:
   date-fns@3.3.1:
     resolution: {integrity: sha512-y8e109LYGgoQDveiEBD3DYXKba1jWf5BA8YU1FL5Tvm0BTdEfy54WLCwnuYWZNnzzvALy/QQ4Hov+Q9RVRv+Zw==}
 
-  dayjs@1.11.10:
-    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
+  dayjs@1.11.11:
+    resolution: {integrity: sha512-okzr3f11N6WuqYtZSvm+F776mB41wRZMhKP+hc34YdW+KmtYYK9iqvHSwo2k9FEH3fhGXvOPV6yz2IcSrfRUDg==}
 
   debounce@1.2.1:
     resolution: {integrity: sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==}
@@ -5979,7 +5979,7 @@ snapshots:
 
   date-fns@3.3.1: {}
 
-  dayjs@1.11.10: {}
+  dayjs@1.11.11: {}
 
   debounce@1.2.1: {}
 
