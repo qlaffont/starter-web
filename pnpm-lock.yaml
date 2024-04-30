@@ -16,7 +16,7 @@ importers:
         version: 3.3.4(react-hook-form@7.51.3(react@18.3.1))
       '@t3-oss/env-nextjs':
         specifier: ^0.10.0
-        version: 0.10.1(typescript@5.4.5)(zod@3.23.4)
+        version: 0.10.1(typescript@5.4.5)(zod@3.23.5)
       '@tailwindcss/forms':
         specifier: 0.5.7
         version: 0.5.7(tailwindcss@3.4.3(ts-node@10.9.2(@types/node@20.12.7)(typescript@5.4.5)))
@@ -73,7 +73,7 @@ importers:
         version: 3.1.0(react@18.3.1)
       zod:
         specifier: ^3.22.4
-        version: 3.23.4
+        version: 3.23.5
       zod-rosetty:
         specifier: ^1.0.103
         version: 1.0.167
@@ -3942,8 +3942,8 @@ packages:
     resolution: {integrity: sha512-zzNiLI6YY3Mx+Y8xSg5bWNoFXk4ZFMJrYLukqexrYyC6QgBBlj0cXMiP+POqBd290ehcjm+FIkWv+io5CPP3KA==}
     engines: {node: '>=10'}
 
-  zod@3.23.4:
-    resolution: {integrity: sha512-/AtWOKbBgjzEYYQRNfoGKHObgfAZag6qUJX1VbHo2PRBgS+wfWagEY2mizjfyAPcGesrJOcx/wcl0L9WnVrHFw==}
+  zod@3.23.5:
+    resolution: {integrity: sha512-fkwiq0VIQTksNNA131rDOsVJcns0pfVUjHzLrNBiF/O/Xxb5lQyEXkhZWcJ7npWsYlvs+h0jFWXXy4X46Em1JA==}
 
 snapshots:
 
@@ -5288,16 +5288,16 @@ snapshots:
       '@swc/counter': 0.1.3
       tslib: 2.6.2
 
-  '@t3-oss/env-core@0.10.1(typescript@5.4.5)(zod@3.23.4)':
+  '@t3-oss/env-core@0.10.1(typescript@5.4.5)(zod@3.23.5)':
     dependencies:
-      zod: 3.23.4
+      zod: 3.23.5
     optionalDependencies:
       typescript: 5.4.5
 
-  '@t3-oss/env-nextjs@0.10.1(typescript@5.4.5)(zod@3.23.4)':
+  '@t3-oss/env-nextjs@0.10.1(typescript@5.4.5)(zod@3.23.5)':
     dependencies:
-      '@t3-oss/env-core': 0.10.1(typescript@5.4.5)(zod@3.23.4)
-      zod: 3.23.4
+      '@t3-oss/env-core': 0.10.1(typescript@5.4.5)(zod@3.23.5)
+      zod: 3.23.5
     optionalDependencies:
       typescript: 5.4.5
 
@@ -8427,6 +8427,6 @@ snapshots:
 
   zod-rosetty@1.0.167:
     dependencies:
-      zod: 3.23.4
+      zod: 3.23.5
 
-  zod@3.23.4: {}
+  zod@3.23.5: {}
