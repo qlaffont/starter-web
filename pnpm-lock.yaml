@@ -76,7 +76,7 @@ importers:
         version: 3.23.6
       zod-rosetty:
         specifier: ^1.0.103
-        version: 1.0.170
+        version: 1.0.171
     devDependencies:
       '@babel/core':
         specifier: 7.24.5
@@ -3938,8 +3938,8 @@ packages:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
 
-  zod-rosetty@1.0.170:
-    resolution: {integrity: sha512-38+AGntNdLSIv1W8f/fSiVFryxDjXQSCnwirMvdE13QVxhfXF3PaoMx5Altk1QjwVIaSH5R6tJi8s3k8CSFeGg==}
+  zod-rosetty@1.0.171:
+    resolution: {integrity: sha512-8V9rpdPlBimR7JuWj2tUzLMAXOROb9WVS9uuoDev73k4uhMmSbD/B9CzmAdmRSCcZsu5od8NljVVDv3QPq9ldA==}
     engines: {node: '>=10'}
 
   zod@3.23.6:
@@ -8425,7 +8425,7 @@ snapshots:
 
   yocto-queue@1.0.0: {}
 
-  zod-rosetty@1.0.170:
+  zod-rosetty@1.0.171:
     dependencies:
       zod: 3.23.6
 
