@@ -25,7 +25,7 @@
     "@tanstack/react-query-devtools": "5.45.1",
     "classix": "^2.1.36",
     "dayjs": "^1.11.10",
-    "graphql": "16.8.2",
+    "graphql": "16.9.0",
     "next": "14.2.4",
     "next-protected-auth": "2.0.328",
     "next-seo": "6.5.0",
