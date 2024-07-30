@@ -42,7 +42,7 @@
     "zod-rosetty": "^1.0.103"
   },
   "devDependencies": {
-    "@babel/core": "7.24.9",
+    "@babel/core": "7.25.2",
     "@commitlint/cli": "19.3.0",
     "@commitlint/config-conventional": "19.2.2",
     "@graphql-codegen/cli": "5.0.2",
