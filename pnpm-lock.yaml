@@ -148,8 +148,8 @@ importers:
         specifier: 9.1.4
         version: 9.1.4
       lint-staged:
-        specifier: 15.2.8
-        version: 15.2.8
+        specifier: 15.2.9
+        version: 15.2.9
       postcss:
         specifier: 8.4.41
         version: 8.4.41
@@ -2687,8 +2687,8 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  lint-staged@15.2.8:
-    resolution: {integrity: sha512-PUWFf2zQzsd9EFU+kM1d7UP+AZDbKFKuj+9JNVTBkhUFhbg4MAt6WfyMMwBfM4lYqd4D2Jwac5iuTu9rVj4zCQ==}
+  lint-staged@15.2.9:
+    resolution: {integrity: sha512-BZAt8Lk3sEnxw7tfxM7jeZlPRuT4M68O0/CwZhhaw6eeWu0Lz5eERE3m386InivXB64fp/mDID452h48tvKlRQ==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
@@ -5020,7 +5020,7 @@ snapshots:
       '@graphql-tools/utils': 10.0.13(graphql@16.9.0)
       graphql: 16.9.0
       is-glob: 4.0.3
-      micromatch: 4.0.5
+      micromatch: 4.0.7
       tslib: 2.6.2
       unixify: 1.0.0
     transitivePeerDependencies:
@@ -5110,7 +5110,7 @@ snapshots:
       '@types/json-stable-stringify': 1.0.36
       '@whatwg-node/fetch': 0.9.16
       chalk: 4.1.2
-      debug: 4.3.4
+      debug: 4.3.6
       dotenv: 16.4.2
       graphql: 16.9.0
       graphql-request: 6.1.0(graphql@16.9.0)
@@ -5479,7 +5479,7 @@ snapshots:
       '@typescript-eslint/types': 6.21.0
       '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.4.5)
       '@typescript-eslint/visitor-keys': 6.21.0
-      debug: 4.3.4
+      debug: 4.3.6
       eslint: 8.57.0
     optionalDependencies:
       typescript: 5.4.5
@@ -6238,7 +6238,7 @@ snapshots:
   engine.io-client@6.5.3:
     dependencies:
       '@socket.io/component-emitter': 3.1.0
-      debug: 4.3.4
+      debug: 4.3.6
       engine.io-parser: 5.2.2
       ws: 8.11.0
       xmlhttprequest-ssl: 2.0.0
@@ -6380,7 +6380,7 @@ snapshots:
 
   eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0):
     dependencies:
-      debug: 4.3.4
+      debug: 4.3.6
       enhanced-resolve: 5.15.0
       eslint: 8.57.0
       eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0)
@@ -7221,7 +7221,7 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  lint-staged@15.2.8:
+  lint-staged@15.2.9:
     dependencies:
       chalk: 5.3.0
       commander: 12.1.0
@@ -8039,7 +8039,7 @@ snapshots:
   socket.io-parser@4.2.4:
     dependencies:
       '@socket.io/component-emitter': 3.1.0
-      debug: 4.3.4
+      debug: 4.3.6
     transitivePeerDependencies:
       - supports-color
 
