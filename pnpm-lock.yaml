@@ -100,8 +100,8 @@ importers:
         specifier: 6.1.0
         version: 6.1.0(graphql@16.10.0)
       '@hookform/devtools':
-        specifier: 4.3.2
-        version: 4.3.2(@types/react@18.3.17)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 4.3.3
+        version: 4.3.3(@types/react@18.3.17)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@tailwindcss/line-clamp':
         specifier: 0.4.4
         version: 0.4.4(tailwindcss@3.4.16(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2)))
@@ -957,8 +957,8 @@ packages:
       react: ^16 || ^17 || ^18
       react-dom: ^16 || ^17 || ^18
 
-  '@hookform/devtools@4.3.2':
-    resolution: {integrity: sha512-KqOvgzmjv73QOp6YUI8TuvNcVHhXitydHpqchA7D5TNY9Qz0SWpopeHdpgZhqEpZkteOBzxAumblZWOsXTPaAg==}
+  '@hookform/devtools@4.3.3':
+    resolution: {integrity: sha512-W9MipDe6P5y2XLos9coN4/fZhbt0YE2c+PaUx7tiKdc9XNQ2UOWCYTtysCnbj7fipZWEJht8J/UyQmXprWEhgw==}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
       react-dom: ^16.8.0 || ^17 || ^18 || ^19
@@ -5361,7 +5361,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@hookform/devtools@4.3.2(@types/react@18.3.17)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@hookform/devtools@4.3.3(@types/react@18.3.17)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@emotion/react': 11.11.3(@types/react@18.3.17)(react@18.3.1)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.3(@types/react@18.3.17)(react@18.3.1))(@types/react@18.3.17)(react@18.3.1)
