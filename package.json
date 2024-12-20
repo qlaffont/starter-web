@@ -52,7 +52,7 @@
     "@hookform/devtools": "4.3.3",
     "@tailwindcss/line-clamp": "0.4.4",
     "@types/node": "22.10.2",
-    "@types/react": "18.3.17",
+    "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
     "@typescript-eslint/eslint-plugin": "8.18.1",
     "@typescript-eslint/parser": "8.18.1",
